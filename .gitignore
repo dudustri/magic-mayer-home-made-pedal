@@ -1,0 +1,9 @@
+# build outputs
+build/
+sim
+tuner
+renders/
+
+# fetched by `make deps` / `make recordings`
+third_party/
+recordings/*.wav

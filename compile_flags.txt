@@ -1,0 +1,6 @@
+-xc++
+-std=c++17
+-Ithird_party/imgui
+-Ithird_party/imgui/backends
+-Ithird_party/implot
+-I/usr/include/SDL2
