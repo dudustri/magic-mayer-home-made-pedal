@@ -88,7 +88,7 @@ static void audioCallback(void *, Uint8 *stream, int len) {
     if (!audio.playing || audio.in.empty()) { out[i] = 0; continue; }
     size_t p = audio.pos;
     float x = audio.in[p] * audio.inGain;
-    float src[3] = {x, audio.live.process(x), p < audio.ref.size() ? audio.ref[p] : 0};  // model always runs: seamless A/B
+    float src[3] = {x, audio.live.process(x), p < audio.ref.size() ? audio.ref[p] : 0};  // model always runs, so switching sources has no gap
     for (int k = 0; k < 3; k++) audio.scope[k][audio.scopeW & (SCOPE - 1)] = src[k];
     audio.scopeW++;
     audio.pos = (p + 1) % audio.in.size();
