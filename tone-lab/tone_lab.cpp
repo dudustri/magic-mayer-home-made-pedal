@@ -1,4 +1,4 @@
-// Pedal Tuner: desktop app to tune pedal.h by ear and by eye.
+// Tone Lab: desktop app to tune pedal.h by ear and by eye.
 // Audio plays through the real pedal code in real time; knobs change the sound while it plays.
 // Usage: ./tuner [guitar.wav [real_pedal_output.wav]]   (or drag a WAV onto the window)
 // A file named *_in.wav is paired automatically with *_out.wav: a recording of a real pedal to compare against.
@@ -348,7 +348,7 @@ int main(int argc, char **argv) {
   SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
   SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
   SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-  SDL_Window *window = SDL_CreateWindow("Pedal Tuner", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1500, 950,
+  SDL_Window *window = SDL_CreateWindow("Tone Lab", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1500, 950,
                                         SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
   if (!window) { fprintf(stderr, "SDL_CreateWindow: %s\n", SDL_GetError()); return 1; }
   SDL_GLContext gl = SDL_GL_CreateContext(window);
@@ -502,7 +502,7 @@ int main(int argc, char **argv) {
         char cfg[2048];
         ui.dump(cfg, sizeof cfg);
         fs_::create_directories("presets");
-        std::ofstream("presets/" + name + ".cfg") << "# saved by Pedal Tuner\n" << cfg;
+        std::ofstream("presets/" + name + ".cfg") << "# saved by Tone Lab\n" << cfg;
         presets = listPresets();
         presetIdx = int(std::find(presets.begin(), presets.end(), name) - presets.begin());
         status = "saved presets/" + name + ".cfg";

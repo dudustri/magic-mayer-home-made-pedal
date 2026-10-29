@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 300" width="1240" height="300" role="img" aria-labelledby="title desc" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<title id="title">Tube Screamer TS808 block diagram</title>
+<desc id="desc">Input jack, 3PDT footswitch, transistor input buffer, clipping stage with the first half of the JRC4558 and the DRIVE pot, tone stage with the second half and the TONE pot, LEVEL pot, transistor output buffer, footswitch, output jack. With the footswitch off, the input jack connects straight to the output jack (true bypass).</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="20" y="110" width="140" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="90.0" y="138" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">In</text>
+<text x="90.0" y="158" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">jack</text>
+<rect x="194" y="110" width="140" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="264.0" y="138" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Input buffer</text>
+<text x="264.0" y="158" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">2SC1815</text>
+<polyline points="160,142 186,142" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M186 136 L186 148 L194 142 Z" fill="#8a3fb0"/>
+<rect x="368" y="110" width="140" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="438.0" y="138" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Clipping</text>
+<text x="438.0" y="158" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">4558 A, DRIVE</text>
+<polyline points="334,142 360,142" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M360 136 L360 148 L368 142 Z" fill="#8a3fb0"/>
+<rect x="542" y="110" width="140" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="612.0" y="138" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Tone</text>
+<text x="612.0" y="158" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">4558 B, TONE</text>
+<polyline points="508,142 534,142" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M534 136 L534 148 L542 142 Z" fill="#8a3fb0"/>
+<rect x="716" y="110" width="140" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="786.0" y="138" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Level</text>
+<text x="786.0" y="158" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">LEVEL pot</text>
+<polyline points="682,142 708,142" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M708 136 L708 148 L716 142 Z" fill="#8a3fb0"/>
+<rect x="890" y="110" width="140" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="960.0" y="138" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Output buffer</text>
+<text x="960.0" y="158" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">2SC1815</text>
+<polyline points="856,142 882,142" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M882 136 L882 148 L890 142 Z" fill="#8a3fb0"/>
+<rect x="1064" y="110" width="140" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="1134.0" y="138" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Out</text>
+<text x="1134.0" y="158" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">jack</text>
+<polyline points="1030,142 1056,142" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M1056 136 L1056 148 L1064 142 Z" fill="#8a3fb0"/>
+<path d="M90 110 V70 H1134 V110" fill="none" stroke="#6b7280" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="612.0" y="62" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">Footswitch off: true bypass (3PDT connects In straight to Out)</text>
+<text x="20" y="230" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Power: 9 V, 1N4001 polarity protection, 2 x 10 kΩ + 47 µF make Vref = 4.5 V for the op-amp.</text>
+<text x="20" y="248" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Values from the TS808 schematic as described in the ElectroSmash analysis. Use the parts list of the PCB you build.</text>
+</svg>

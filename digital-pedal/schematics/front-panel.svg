@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 820" width="1180" height="820" role="img" aria-labelledby="title desc" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<title id="title">Digital pedal: front panel</title>
+<desc id="desc">Seven 10 kilohm linear pots: one outer pin to 3V3, the other to ground, the wiper to ESP32-S3 GPIO 1 to 7, each wiper with a 100 nanofarad capacitor to ground. RV7 pull switch to GPIO18. Footswitches SW1, SW2, SW3 to GPIO15, 16, 17, switching to ground with internal pull-ups. LEDs on GPIO8, 9, 21 through 1 kilohm resistors.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="30" y="40" font-size="22" text-anchor="start" font-weight="bold" fill="#1f2937">Digital pedal: front panel</text>
+<text x="30" y="64" font-size="13" text-anchor="start" font-weight="normal" fill="#6b7280">Pots: 10k linear (B) on GPIO1-7 (ADC1, works with the radio on). Switches close to GND (internal pull-ups).</text>
+<rect x="560" y="110" width="200" height="610" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="660.0" y="132" font-size="15" text-anchor="middle" font-weight="bold" fill="#1f2937">U1</text>
+<text x="660.0" y="150" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">ESP32-S3 DevKitC-1</text>
+<line x1="540" y1="200" x2="560" y2="200" stroke="#1f2937" stroke-width="2"/>
+<text x="568" y="204" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">GPIO1</text>
+<line x1="540" y1="280" x2="560" y2="280" stroke="#1f2937" stroke-width="2"/>
+<text x="568" y="284" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">GPIO2</text>
+<line x1="540" y1="360" x2="560" y2="360" stroke="#1f2937" stroke-width="2"/>
+<text x="568" y="364" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">GPIO3</text>
+<line x1="540" y1="440" x2="560" y2="440" stroke="#1f2937" stroke-width="2"/>
+<text x="568" y="444" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">GPIO4</text>
+<line x1="540" y1="520" x2="560" y2="520" stroke="#1f2937" stroke-width="2"/>
+<text x="568" y="524" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">GPIO5</text>
+<line x1="540" y1="600" x2="560" y2="600" stroke="#1f2937" stroke-width="2"/>
+<text x="568" y="604" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">GPIO6</text>
+<line x1="540" y1="680" x2="560" y2="680" stroke="#1f2937" stroke-width="2"/>
+<text x="568" y="684" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">GPIO7</text>
+<line x1="760" y1="200" x2="780" y2="200" stroke="#1f2937" stroke-width="2"/>
+<text x="752" y="204" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">GPIO18</text>
+<line x1="760" y1="280" x2="780" y2="280" stroke="#1f2937" stroke-width="2"/>
+<text x="752" y="284" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">GPIO15</text>
+<line x1="760" y1="360" x2="780" y2="360" stroke="#1f2937" stroke-width="2"/>
+<text x="752" y="364" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">GPIO16</text>
+<line x1="760" y1="440" x2="780" y2="440" stroke="#1f2937" stroke-width="2"/>
+<text x="752" y="444" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">GPIO17</text>
+<line x1="760" y1="520" x2="780" y2="520" stroke="#1f2937" stroke-width="2"/>
+<text x="752" y="524" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">GPIO8</text>
+<line x1="760" y1="600" x2="780" y2="600" stroke="#1f2937" stroke-width="2"/>
+<text x="752" y="604" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">GPIO9</text>
+<line x1="760" y1="680" x2="780" y2="680" stroke="#1f2937" stroke-width="2"/>
+<text x="752" y="684" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">GPIO21</text>
+<rect x="253" y="180" width="14" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M284 200 H270 M270 200 l7 -5 M270 200 l7 5" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="248" y="197" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937">RV1</text>
+<text x="248" y="212" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">10k B</text>
+<polyline points="260,180 260,172 230,172" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<rect x="192" y="162" width="38" height="20" rx="4" fill="#ffffff" stroke="#c43d2f" stroke-width="1.5"/>
+<text x="211.0" y="176" font-size="12" text-anchor="middle" font-weight="bold" fill="#c43d2f">3V3</text>
+<polyline points="260,220 260,228" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M260 228 V238 M248 238 H272 M252 243 H268 M256 248 H264" stroke="#4b5563" stroke-width="2" fill="none"/>
+<polyline points="284,200 540,200" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<text x="300" y="194" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">TS DRIVE</text>
+<circle cx="420" cy="200" r="3.5" fill="#1f2937"/>
+<path d="M420 210 V221 M408 221 H432 M408 229 H432 M420 229 V240" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="438" y="222" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">C11</text>
+<text x="438" y="237" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">100 nF</text>
+<polyline points="420,200 420,210" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M420 240 V250 M408 250 H432 M412 255 H428 M416 260 H424" stroke="#4b5563" stroke-width="2" fill="none"/>
+<rect x="253" y="260" width="14" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M284 280 H270 M270 280 l7 -5 M270 280 l7 5" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="248" y="277" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937">RV2</text>
+<text x="248" y="292" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">10k B</text>
+<polyline points="260,260 260,252 230,252" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<rect x="192" y="242" width="38" height="20" rx="4" fill="#ffffff" stroke="#c43d2f" stroke-width="1.5"/>
+<text x="211.0" y="256" font-size="12" text-anchor="middle" font-weight="bold" fill="#c43d2f">3V3</text>
+<polyline points="260,300 260,308" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M260 308 V318 M248 318 H272 M252 323 H268 M256 328 H264" stroke="#4b5563" stroke-width="2" fill="none"/>
+<polyline points="284,280 540,280" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<text x="300" y="274" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">TS TONE</text>
+<circle cx="420" cy="280" r="3.5" fill="#1f2937"/>
+<path d="M420 290 V301 M408 301 H432 M408 309 H432 M420 309 V320" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="438" y="302" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">C12</text>
+<text x="438" y="317" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">100 nF</text>
+<polyline points="420,280 420,290" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M420 320 V330 M408 330 H432 M412 335 H428 M416 340 H424" stroke="#4b5563" stroke-width="2" fill="none"/>
+<rect x="253" y="340" width="14" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M284 360 H270 M270 360 l7 -5 M270 360 l7 5" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="248" y="357" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937">RV3</text>
+<text x="248" y="372" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">10k B</text>
+<polyline points="260,340 260,332 230,332" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<rect x="192" y="322" width="38" height="20" rx="4" fill="#ffffff" stroke="#c43d2f" stroke-width="1.5"/>
+<text x="211.0" y="336" font-size="12" text-anchor="middle" font-weight="bold" fill="#c43d2f">3V3</text>
+<polyline points="260,380 260,388" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M260 388 V398 M248 398 H272 M252 403 H268 M256 408 H264" stroke="#4b5563" stroke-width="2" fill="none"/>
+<polyline points="284,360 540,360" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<text x="300" y="354" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">TS LEVEL</text>
+<circle cx="420" cy="360" r="3.5" fill="#1f2937"/>
+<path d="M420 370 V381 M408 381 H432 M408 389 H432 M420 389 V400" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="438" y="382" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">C13</text>
+<text x="438" y="397" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">100 nF</text>
+<polyline points="420,360 420,370" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M420 400 V410 M408 410 H432 M412 415 H428 M416 420 H424" stroke="#4b5563" stroke-width="2" fill="none"/>
+<rect x="253" y="420" width="14" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M284 440 H270 M270 440 l7 -5 M270 440 l7 5" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="248" y="437" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937">RV4</text>
+<text x="248" y="452" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">10k B</text>
+<polyline points="260,420 260,412 230,412" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<rect x="192" y="402" width="38" height="20" rx="4" fill="#ffffff" stroke="#c43d2f" stroke-width="1.5"/>
+<text x="211.0" y="416" font-size="12" text-anchor="middle" font-weight="bold" fill="#c43d2f">3V3</text>
+<polyline points="260,460 260,468" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M260 468 V478 M248 478 H272 M252 483 H268 M256 488 H264" stroke="#4b5563" stroke-width="2" fill="none"/>
+<polyline points="284,440 540,440" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<text x="300" y="434" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">KLON GAIN</text>
+<circle cx="420" cy="440" r="3.5" fill="#1f2937"/>
+<path d="M420 450 V461 M408 461 H432 M408 469 H432 M420 469 V480" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="438" y="462" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">C14</text>
+<text x="438" y="477" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">100 nF</text>
+<polyline points="420,440 420,450" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M420 480 V490 M408 490 H432 M412 495 H428 M416 500 H424" stroke="#4b5563" stroke-width="2" fill="none"/>
+<rect x="253" y="500" width="14" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M284 520 H270 M270 520 l7 -5 M270 520 l7 5" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="248" y="517" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937">RV5</text>
+<text x="248" y="532" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">10k B</text>
+<polyline points="260,500 260,492 230,492" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<rect x="192" y="482" width="38" height="20" rx="4" fill="#ffffff" stroke="#c43d2f" stroke-width="1.5"/>
+<text x="211.0" y="496" font-size="12" text-anchor="middle" font-weight="bold" fill="#c43d2f">3V3</text>
+<polyline points="260,540 260,548" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M260 548 V558 M248 558 H272 M252 563 H268 M256 568 H264" stroke="#4b5563" stroke-width="2" fill="none"/>
+<polyline points="284,520 540,520" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<text x="300" y="514" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">KLON TREBLE</text>
+<circle cx="420" cy="520" r="3.5" fill="#1f2937"/>
+<path d="M420 530 V541 M408 541 H432 M408 549 H432 M420 549 V560" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="438" y="542" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">C15</text>
+<text x="438" y="557" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">100 nF</text>
+<polyline points="420,520 420,530" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M420 560 V570 M408 570 H432 M412 575 H428 M416 580 H424" stroke="#4b5563" stroke-width="2" fill="none"/>
+<rect x="253" y="580" width="14" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M284 600 H270 M270 600 l7 -5 M270 600 l7 5" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="248" y="597" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937">RV6</text>
+<text x="248" y="612" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">10k B</text>
+<polyline points="260,580 260,572 230,572" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<rect x="192" y="562" width="38" height="20" rx="4" fill="#ffffff" stroke="#c43d2f" stroke-width="1.5"/>
+<text x="211.0" y="576" font-size="12" text-anchor="middle" font-weight="bold" fill="#c43d2f">3V3</text>
+<polyline points="260,620 260,628" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M260 628 V638 M248 638 H272 M252 643 H268 M256 648 H264" stroke="#4b5563" stroke-width="2" fill="none"/>
+<polyline points="284,600 540,600" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<text x="300" y="594" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">KLON OUTPUT</text>
+<circle cx="420" cy="600" r="3.5" fill="#1f2937"/>
+<path d="M420 610 V621 M408 621 H432 M408 629 H432 M420 629 V640" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="438" y="622" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">C16</text>
+<text x="438" y="637" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">100 nF</text>
+<polyline points="420,600 420,610" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M420 640 V650 M408 650 H432 M412 655 H428 M416 660 H424" stroke="#4b5563" stroke-width="2" fill="none"/>
+<rect x="253" y="660" width="14" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M284 680 H270 M270 680 l7 -5 M270 680 l7 5" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="248" y="677" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937">RV7</text>
+<text x="248" y="692" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">10k B</text>
+<polyline points="260,660 260,652 230,652" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<rect x="192" y="642" width="38" height="20" rx="4" fill="#ffffff" stroke="#c43d2f" stroke-width="1.5"/>
+<text x="211.0" y="656" font-size="12" text-anchor="middle" font-weight="bold" fill="#c43d2f">3V3</text>
+<polyline points="260,700 260,708" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M260 708 V718 M248 718 H272 M252 723 H268 M256 728 H264" stroke="#4b5563" stroke-width="2" fill="none"/>
+<polyline points="284,680 540,680" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<text x="300" y="674" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">KATANA VOLUME</text>
+<circle cx="420" cy="680" r="3.5" fill="#1f2937"/>
+<path d="M420 690 V701 M408 701 H432 M408 709 H432 M420 709 V720" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="438" y="702" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">C17</text>
+<text x="438" y="717" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">100 nF</text>
+<polyline points="420,680 420,690" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M420 720 V730 M408 730 H432 M412 735 H428 M416 740 H424" stroke="#4b5563" stroke-width="2" fill="none"/>
+<polyline points="780,200 840,200" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="840" cy="204" r="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><circle cx="840" cy="236" r="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M840 233 L856 208" stroke="#1f2937" stroke-width="2"/>
+<text x="828" y="220" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937"></text>
+<text x="828" y="234" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280"></text>
+<polyline points="840,240 840,244" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M840 244 V254 M828 254 H852 M832 259 H848 M836 264 H844" stroke="#4b5563" stroke-width="2" fill="none"/>
+<text x="865" y="218" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">RV7 pull switch</text>
+<text x="865" y="233" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">Katana dirty mode</text>
+<polyline points="780,280 840,280" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="840" cy="284" r="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><circle cx="840" cy="316" r="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M840 313 L856 288" stroke="#1f2937" stroke-width="2"/>
+<text x="828" y="300" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937"></text>
+<text x="828" y="314" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280"></text>
+<polyline points="840,320 840,324" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M840 324 V334 M828 334 H852 M832 339 H848 M836 344 H844" stroke="#4b5563" stroke-width="2" fill="none"/>
+<text x="865" y="298" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">SW1</text>
+<text x="865" y="313" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">TS on/off</text>
+<polyline points="780,360 840,360" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="840" cy="364" r="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><circle cx="840" cy="396" r="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M840 393 L856 368" stroke="#1f2937" stroke-width="2"/>
+<text x="828" y="380" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937"></text>
+<text x="828" y="394" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280"></text>
+<polyline points="840,400 840,404" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M840 404 V414 M828 414 H852 M832 419 H848 M836 424 H844" stroke="#4b5563" stroke-width="2" fill="none"/>
+<text x="865" y="378" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">SW2</text>
+<text x="865" y="393" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">Klon on/off</text>
+<polyline points="780,440 840,440" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="840" cy="444" r="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><circle cx="840" cy="476" r="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M840 473 L856 448" stroke="#1f2937" stroke-width="2"/>
+<text x="828" y="460" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937"></text>
+<text x="828" y="474" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280"></text>
+<polyline points="840,480 840,484" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M840 484 V494 M828 494 H852 M832 499 H848 M836 504 H844" stroke="#4b5563" stroke-width="2" fill="none"/>
+<text x="865" y="458" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">SW3</text>
+<text x="865" y="473" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">Katana on/off</text>
+<rect x="820" y="513" width="40" height="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="840" y="507" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2937"> </text>
+<text x="840" y="544" font-size="11" text-anchor="middle" font-weight="normal" fill="#6b7280">1 kΩ</text>
+<polyline points="780,520 820,520" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M895 520 H925 M903 512 L903 528 L917 520 Z M917 512 V528" stroke="#1f2937" stroke-width="2" fill="#ffffff"/>
+<path d="M908 509 l6 -8 M911 501 h3 v3" stroke="#1f2937" stroke-width="1.5" fill="none"/>
+<path d="M915 509 l6 -8 M918 501 h3 v3" stroke="#1f2937" stroke-width="1.5" fill="none"/>
+<text x="910" y="544" font-size="11" text-anchor="middle" font-weight="normal" fill="#6b7280"></text>
+<polyline points="860,520 895,520" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="925,520 950,520" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M950 520 V530 M938 530 H962 M942 535 H958 M946 540 H954" stroke="#4b5563" stroke-width="2" fill="none"/>
+<text x="980" y="524" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">R6, LED1</text>
+<text x="980" y="539" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">TS</text>
+<rect x="820" y="593" width="40" height="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="840" y="587" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2937"> </text>
+<text x="840" y="624" font-size="11" text-anchor="middle" font-weight="normal" fill="#6b7280">1 kΩ</text>
+<polyline points="780,600 820,600" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M895 600 H925 M903 592 L903 608 L917 600 Z M917 592 V608" stroke="#1f2937" stroke-width="2" fill="#ffffff"/>
+<path d="M908 589 l6 -8 M911 581 h3 v3" stroke="#1f2937" stroke-width="1.5" fill="none"/>
+<path d="M915 589 l6 -8 M918 581 h3 v3" stroke="#1f2937" stroke-width="1.5" fill="none"/>
+<text x="910" y="624" font-size="11" text-anchor="middle" font-weight="normal" fill="#6b7280"></text>
+<polyline points="860,600 895,600" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="925,600 950,600" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M950 600 V610 M938 610 H962 M942 615 H958 M946 620 H954" stroke="#4b5563" stroke-width="2" fill="none"/>
+<text x="980" y="604" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">R7, LED2</text>
+<text x="980" y="619" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">Klon</text>
+<rect x="820" y="673" width="40" height="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="840" y="667" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2937"> </text>
+<text x="840" y="704" font-size="11" text-anchor="middle" font-weight="normal" fill="#6b7280">1 kΩ</text>
+<polyline points="780,680 820,680" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M895 680 H925 M903 672 L903 688 L917 680 Z M917 672 V688" stroke="#1f2937" stroke-width="2" fill="#ffffff"/>
+<path d="M908 669 l6 -8 M911 661 h3 v3" stroke="#1f2937" stroke-width="1.5" fill="none"/>
+<path d="M915 669 l6 -8 M918 661 h3 v3" stroke="#1f2937" stroke-width="1.5" fill="none"/>
+<text x="910" y="704" font-size="11" text-anchor="middle" font-weight="normal" fill="#6b7280"></text>
+<polyline points="860,680 895,680" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="925,680 950,680" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M950 680 V690 M938 690 H962 M942 695 H958 M946 700 H954" stroke="#4b5563" stroke-width="2" fill="none"/>
+<text x="980" y="684" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">R8, LED3</text>
+<text x="980" y="699" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">Katana</text>
+<line x1="30" y1="796" x2="54" y2="796" stroke="#c43d2f" stroke-width="3"/>
+<text x="60" y="800" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Power</text>
+<line x1="111.5" y1="796" x2="135.5" y2="796" stroke="#4b5563" stroke-width="3"/>
+<text x="141.5" y="800" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Ground</text>
+<line x1="200.5" y1="796" x2="224.5" y2="796" stroke="#8a3fb0" stroke-width="3"/>
+<text x="230.5" y="800" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Analog audio</text>
+<line x1="334.5" y1="796" x2="358.5" y2="796" stroke="#2563a8" stroke-width="3"/>
+<text x="364.5" y="800" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">I2S audio data and clocks</text>
+<line x1="566.0" y1="796" x2="590.0" y2="796" stroke="#2f8a4a" stroke-width="3"/>
+<text x="596.0" y="800" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">I2C setup</text>
+<line x1="677.5" y1="796" x2="701.5" y2="796" stroke="#b0731a" stroke-width="3"/>
+<text x="707.5" y="800" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">SPI radio</text>
+</svg>

@@ -1,5 +1,6 @@
 -xc++
 -std=c++17
+-I..
 -Ithird_party/imgui
 -Ithird_party/imgui/backends
 -Ithird_party/implot

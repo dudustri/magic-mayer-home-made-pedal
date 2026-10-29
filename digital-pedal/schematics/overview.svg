@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 360" width="1180" height="360" role="img" aria-labelledby="title desc" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<title id="title">Digital pedal overview</title>
+<desc id="desc">Guitar cable into a TL072 buffer and PCM1808 ADC, or the wireless transmitter into the nRF24 radio. Both reach the ESP32-S3 running pedal.h (Tube Screamer, Klon, Katana), then the PCM5102A DAC, master volume and amp. Seven pots, a pull switch and three footswitches set the knobs. With all effects off the clean sound passes through.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="20" y="120" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="80.0" y="148" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Guitar</text>
+<text x="80.0" y="168" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">J1 in</text>
+<rect x="185" y="120" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="245.0" y="148" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Buffer</text>
+<text x="245.0" y="168" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">TL072</text>
+<polyline points="140,152 177,152" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M177 146 L177 158 L185 152 Z" fill="#8a3fb0"/>
+<rect x="350" y="120" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="410.0" y="148" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">ADC</text>
+<text x="410.0" y="168" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">PCM1808</text>
+<polyline points="305,152 342,152" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M342 146 L342 158 L350 152 Z" fill="#8a3fb0"/>
+<rect x="515" y="120" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="575.0" y="148" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">ESP32-S3</text>
+<text x="575.0" y="168" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">pedal.h</text>
+<polyline points="470,152 507,152" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M507 146 L507 158 L515 152 Z" fill="#8a3fb0"/>
+<rect x="680" y="120" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="740.0" y="148" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">DAC</text>
+<text x="740.0" y="168" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">PCM5102A</text>
+<polyline points="635,152 672,152" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M672 146 L672 158 L680 152 Z" fill="#8a3fb0"/>
+<rect x="845" y="120" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="905.0" y="148" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Volume</text>
+<text x="905.0" y="168" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">RV8 master</text>
+<polyline points="800,152 837,152" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M837 146 L837 158 L845 152 Z" fill="#8a3fb0"/>
+<rect x="1010" y="120" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="1070.0" y="148" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Amp</text>
+<text x="1070.0" y="168" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">J2 out</text>
+<polyline points="965,152 1002,152" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M1002 146 L1002 158 L1010 152 Z" fill="#8a3fb0"/>
+<rect x="455" y="16" width="240" height="56" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="575" y="40" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Wireless in</text>
+<text x="575" y="60" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">nRF24L01+ radio (SPI)</text>
+<polyline points="575,72 575,112" fill="none" stroke="#b0731a" stroke-width="2" stroke-linejoin="round"/>
+<path d="M569 112 L581 112 L575 120 Z" fill="#b0731a"/>
+<polyline points="575,270 575,192" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M569 192 L581 192 L575 184 Z" fill="#1f2937"/>
+<rect x="405" y="270" width="340" height="56" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="575" y="294" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Front panel</text>
+<text x="575" y="314" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">7 pots, pull switch, 3 footswitches, 3 LEDs</text>
+</svg>
