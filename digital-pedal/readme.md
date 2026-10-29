@@ -1,10 +1,10 @@
 # Digital Pedal (ESP32)
 
-**Step 2 of the project.** One box that runs all three effects (Tube Screamer, Klon, Katana) in software on an ESP32. The guitar signal is turned into numbers, [`pedal.h`](../pedal.h) changes them, and they are turned back into sound. The PC tuner runs the same `pedal.h`, so what you tune on the PC is what the pedal plays.
+**Step 2 of the project.** One box that runs all three effects (Tube Screamer, Klon, Katana) in software on an ESP32. The guitar signal is turned into numbers, [`pedal.h`](../pedal.h) changes them, and they are turned back into sound. The Tone Lab runs the same `pedal.h`, so what you tune on the PC is what the pedal plays.
 
 ![Block diagram: guitar, TL072 buffer, PCM1808 ADC, ESP32 running pedal.h, PCM5102A DAC, master volume, amp. A front panel with 7 pots, a pull switch, 3 footswitches and 3 LEDs feeds the ESP32.](schematics/overview.svg)
 
-Parts and prices: [SHOPPING_LIST.md](../SHOPPING_LIST.md), sections 1-7. Knob mapping: [PLAN.md, Controls](../PLAN.md#3-controls).
+Parts and prices: [shopping-list.md](../shopping-list.md), sections 1-7. Knob mapping: [plan, Controls](../docs/plan.md#3-controls).
 
 ## Contents
 
@@ -19,13 +19,13 @@ Parts and prices: [SHOPPING_LIST.md](../SHOPPING_LIST.md), sections 1-7. Knob ma
 
 ## 1. Schematics
 
-Labels with the same name (`9V`, `5V`, `3V3`, `BCK`, `LRCK`, `Vref`) are connected. The ESP32 pins are drawn in logical order, not in their order on the board. Redraw with `python3 make_schematics.py` in the repository root.
+Labels with the same name (`9V`, `5V`, `3V3`, `BCK`, `LRCK`, `Vref`) are connected. The ESP32 pins are drawn in logical order, not in their order on the board.
 
 ### Audio path and power
 
 ![Audio path and power. J1 input jack into a TL072 voltage follower biased at 4.5 volt, then C3 into the PCM1808 VINL. PCM1808 SCK, BCK, LRC and OUT to ESP32 GPIO0, 26, 25 and 19. ESP32 GPIO22 to the PCM5102A DIN, with BCK and LRCK shared. PCM5102A LOUT through R5 1 kilohm to the RV8 master volume pot, wiper to the J2 output jack. 9 volt DC jack J3, diode D1, C5 and an AMS1117-5.0 regulator make 5 volt.](schematics/audio-and-power.svg)
 
-The input buffer works like the one in the wireless transmitter, on 9 V instead of 3.3 V: see [how the buffer works](../wireless-guitar-system/README.md#3-the-input-buffer-explained).
+The input buffer works like the one in the wireless transmitter, on 9 V instead of 3.3 V: see [how the buffer works](../wireless-guitar-system/readme.md#3-the-input-buffer-explained).
 
 ### Front panel
 
@@ -238,7 +238,7 @@ A PlatformIO project (Arduino framework for ESP32) in `firmware/`. It includes `
 | Audio task (core 1) | I2S at 48 kHz, 32-bit slots with 24-bit data, ESP32 as master with MCLK. Loop: read a block of 32-64 samples, convert to float (-1 to +1), run `Pedal::process()` on each sample, convert back, write the block |
 | Control task (core 0) | Every 10 ms: read the 7 pots (average 8-16 readings each), scale to 0-10, call `set("tsDriveKnob", v)` and so on, but only when a knob moved more than about 0.05 (hysteresis: pot noise does not trigger recalculation). Read the pull switch into `kaDirty`. Debounce the footswitches, toggle `tsOn` / `klonOn` / `katanaOn` on each press, update the LEDs |
 | Settings handoff | Settings change between audio blocks (a flag or a short critical section), never in the middle of a block |
-| Built-in config | A preset from the tuner ("Copy config") is pasted into the code as text and applied at startup with `Pedal::apply()`. It holds the circuit settings. The pots then set the knob values |
+| Built-in config | A preset from Tone Lab ("Copy config") is pasted into the code as text and applied at startup with `Pedal::apply()`. It holds the circuit settings. The pots then set the knob values |
 | Serial config (stage 2) | Lines sent over USB serial go to `Pedal::apply()`. Same format as `presets/*.cfg`. Allows tuning circuit settings live on the real pedal |
 
 ### Steps
@@ -247,17 +247,17 @@ A PlatformIO project (Arduino framework for ESP32) in `firmware/`. It includes `
 2. [ ] I2S input passed straight to the output, no effects. Check latency (under 3 ms) and noise.
 3. [ ] Add `Pedal` with all effects on and fixed settings.
 4. [ ] Add pots, footswitches and LEDs.
-5. [ ] Add the built-in config from the tuner.
+5. [ ] Add the built-in config from Tone Lab.
 6. [ ] Add serial config.
 7. [ ] Add 2x oversampling around the clipping stages if harsh high-frequency fizz (aliasing) is audible at high drive.
 8. [ ] Measure CPU use: time `process()` per block. Expected: a few percent of one core.
 
-### Moving settings from the tuner to the pedal
+### Moving settings from Tone Lab to the pedal
 
 | Stage | How |
 |---|---|
-| 1. Built in | Tuner, "Copy config", paste into `firmware/src/config.h`, flash |
-| 2. Live over USB | Open a serial monitor, paste config lines, they apply immediately. Later: a "Send to pedal" button in the tuner |
+| 1. Built in | Tone Lab, "Copy config", paste into `firmware/src/config.h`, flash |
+| 2. Live over USB | Open a serial monitor, paste config lines, they apply immediately. Later: a "Send to pedal" button in Tone Lab |
 | 3. Presets in flash | Several presets stored in the ESP32 flash, switched with a 4th footswitch. Problem: the pots stay where they are, so they no longer match a loaded preset. Fix: "pickup mode" (a knob takes control only after it is moved), or rotary encoders with an OLED |
 
 
@@ -294,7 +294,7 @@ A PlatformIO project (Arduino framework for ESP32) in `firmware/`. It includes `
 
 - Delay and reverb (needs the WROVER's PSRAM)
 - OLED and encoder menu, presets in flash, pickup mode for the pots
-- "Send to pedal" button in the tuner (over serial)
+- "Send to pedal" button in Tone Lab (over serial)
 - Headphone output with the amp + cab simulation running on the ESP32
 - Expression pedal, tap tempo
 - The wireless receiver built into the pedal

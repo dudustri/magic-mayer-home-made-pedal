@@ -12,7 +12,7 @@ A cable replacement for the guitar. A small **transmitter** plugs straight into 
 | Battery | 300-500 mAh LiPo per side, charged over USB-C |
 | Range | About 10 m indoors (estimate) |
 | Parts cost | About 60 EUR for both sides (about 40 EUR with the cheaper options in the shopping list), without spares or tools |
-| Parts list | [SHOPPING_LIST.md](../SHOPPING_LIST.md), section 8 (option A) or 9 (option B) |
+| Parts list | [shopping-list.md](../shopping-list.md), section 8 (option A) or 9 (option B) |
 
 Want it working today instead? A ready-made 2.4/5.8 GHz set costs 25-40 EUR on AliExpress (search "guitar wireless system 5.8GHz"). This project is for learning and for later joining it to the pedal.
 
@@ -99,7 +99,7 @@ The guitar sees R1 and R2 in parallel: 500 kOhm, the same as most overdrive peda
 
 ## 4. Schematics
 
-Each drawing is a complete board. Labels with the same name (`3V3`, `Vref`, `CE`) are connected. The XIAO pins are drawn in their real order, as printed on the board. The SVG files are in [schematics/](schematics/); [make_schematics.py](../make_schematics.py) in the repository root redraws them (`python3 make_schematics.py`).
+Each drawing is a complete board. Labels with the same name (`3V3`, `Vref`, `CE`) are connected. The XIAO pins are drawn in their real order, as printed on the board. The SVG files are in [schematics/](schematics/).
 
 ### Option A: transmitter
 
@@ -147,7 +147,7 @@ The same list as text, to tick off while soldering.
 
 ## 5. Parts
 
-Per side. Buy links and spares are in the [shopping list](../SHOPPING_LIST.md).
+Per side. Buy links and spares are in the [shopping list](../shopping-list.md).
 
 | Ref | Part | Transmitter | Receiver |
 |---|---|---|---|

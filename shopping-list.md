@@ -1,6 +1,6 @@
 # Shopping List (AliExpress)
 
-Every part for the digital pedal (B) and the [wireless guitar system](wireless-guitar-system/README.md) (W), plus tools. The analog pedals (Branch A) are postponed: their list is in [analog-pedals/SHOPPING_LIST.md](analog-pedals/SHOPPING_LIST.md).
+Every part for the digital pedal (B) and the [wireless guitar system](wireless-guitar-system/readme.md) (W), plus tools. The analog pedals (Branch A) are postponed: their list is in [analog-pedals/shopping-list.md](analog-pedals/shopping-list.md).
 The "Buy" column already includes spares. Phase 0 (software) needs nothing.
 
 **For:** A = analog pedals, B = digital pedal, W = wireless system, all = shared.
@@ -134,7 +134,7 @@ Not on AliExpress or probably already at home: a drill, isopropyl alcohol, headp
 
 ## 8. Wireless guitar system
 
-Design: [wireless-guitar-system/README.md](wireless-guitar-system/README.md). Seeed XIAO nRF52840 + WM8960 codec on each side, small LiPo battery, 3D-printed case.
+Design: [wireless-guitar-system/readme.md](wireless-guitar-system/readme.md). Seeed XIAO nRF52840 + WM8960 codec on each side, small LiPo battery, 3D-printed case.
 
 | Item | AliExpress link (sorted by orders) | Buy | For | Notes |
 |---|---|---|---|---|
@@ -158,7 +158,7 @@ Custom PCB (optional, after the solderable breadboard works): JLCPCB or PCBWay, 
 
 ## 9. Wireless option B: ESP32 + nRF24 (instead of the nRF52840)
 
-See [wireless-guitar-system/README.md, Option B](wireless-guitar-system/README.md#1-choose-an-option). From section 8, still buy everything except the XIAO nRF52840 and the debug probe.
+See [wireless-guitar-system/readme.md, Option B](wireless-guitar-system/readme.md#1-choose-an-option). From section 8, still buy everything except the XIAO nRF52840 and the debug probe.
 
 | Item | AliExpress link (sorted by orders) | Buy | For | Notes |
 |---|---|---|---|---|
@@ -318,7 +318,7 @@ Target prices in EUR, including Danish VAT (25%), for the quantities in the sect
 | **Everything required** | **303** |
 | Same with wireless option B instead (section 9 replaces the XIAO nRF52840) | 297 |
 | Optional items (marked above) | up to 69 |
-| Analog pedals (postponed, not included) | see [analog-pedals/SHOPPING_LIST.md](analog-pedals/SHOPPING_LIST.md) |
+| Analog pedals (postponed, not included) | see [analog-pedals/shopping-list.md](analog-pedals/shopping-list.md) |
 | **Tools (section 1)** | **161** |
 
 The wireless system alone, one transmitter and one receiver without spares, costs about 60 EUR with XIAO + WM8960 on both sides, or about 40 EUR with the cheaper options below. 3D-printing filament not counted.

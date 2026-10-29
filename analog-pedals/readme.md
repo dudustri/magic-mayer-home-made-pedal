@@ -2,7 +2,7 @@
 
 **Step 3 of the project, postponed.** Real circuits: op-amps, transistors, diodes, resistors and capacitors. One box per effect, each with a true-bypass footswitch. The Tube Screamer comes first: it is the reference the digital pedal is compared against.
 
-Shopping list: [SHOPPING_LIST.md](SHOPPING_LIST.md) in this folder. It must be expanded into every part per pedal before ordering.
+Shopping list: [shopping-list.md](shopping-list.md) in this folder. It must be expanded into every part per pedal before ordering.
 
 Each pedal is its own box: PCB, parts, enclosure, 3PDT true-bypass footswitch, jacks, DC jack and LED.
 
@@ -21,7 +21,7 @@ Complete kits (PCB, all parts, drilled enclosure) were not found on AliExpress, 
 
 ## 1. Schematics
 
-Values from the TS808 schematic as described in the ElectroSmash analysis. Use the parts list of the PCB you build. Redraw with `python3 make_schematics.py` in the repository root.
+Values from the TS808 schematic as described in the ElectroSmash analysis. Use the parts list of the PCB you build.
 
 ![Tube Screamer block diagram: input jack, 3PDT footswitch, transistor input buffer, clipping stage with the first half of the JRC4558 and the DRIVE pot, tone stage with the TONE pot, LEVEL pot, transistor output buffer, output jack. Footswitch off connects input straight to output.](schematics/ts808-overview.svg)
 
@@ -110,7 +110,7 @@ No verified Katana schematic was found. Use the BOM that comes with the PCB.
 4. [ ] Before inserting the op-amp: power on and measure 9 V at socket pin 8 and 4.5 V at Vref.
 5. [ ] Insert the 4558 (pin 1 marked with a dot) and play.
 6. [ ] Find each stage from the [A1 table](#3-tube-screamer-ts808-required-the-reference) on the board.
-7. [ ] Experiments: swap op-amps, replace the 1N914 diodes with 1N34A or LEDs, change C3 from 47 nF to 100 nF. Try the same changes in the tuner's circuit settings.
+7. [ ] Experiments: swap op-amps, replace the 1N914 diodes with 1N34A or LEDs, change C3 from 47 nF to 100 nF. Try the same changes in Tone Lab's circuit settings.
 
 ### Klon and Katana (optional)
 
