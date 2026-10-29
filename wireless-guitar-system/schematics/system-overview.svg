@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 250" width="1180" height="250" role="img" aria-labelledby="title desc" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<title id="title">Wireless guitar system overview</title>
+<desc id="desc">Guitar, then the transmitter: buffer, WM8960 ADC, XIAO with radio. Radio link at 2.4 GHz. Receiver: XIAO with radio, WM8960 DAC and headphone amp, then a 3.5 mm plug to headphones or a line input, or through an adapter to a 6.35 mm amp input.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="20" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="80" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Guitar</text>
+<text x="80" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">pickups</text>
+<rect x="200" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="260" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Buffer</text>
+<text x="260" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">MCP6002</text>
+<rect x="340" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="400" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">ADC</text>
+<text x="400" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">WM8960</text>
+<rect x="480" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="540" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Radio</text>
+<text x="540" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">XIAO</text>
+<rect x="700" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="760" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Radio</text>
+<text x="760" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">XIAO</text>
+<rect x="840" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="900" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">DAC + amp</text>
+<text x="900" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">WM8960</text>
+<rect x="980" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="1040" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Output</text>
+<text x="1040" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">3.5 mm plug</text>
+<polyline points="140,122 192,122" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M192 116 L192 128 L200 122 Z" fill="#8a3fb0"/>
+<polyline points="320,122 332,122" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M332 116 L332 128 L340 122 Z" fill="#8a3fb0"/>
+<polyline points="460,122 472,122" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M472 116 L472 128 L480 122 Z" fill="#8a3fb0"/>
+<polyline points="820,122 832,122" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M832 116 L832 128 L840 122 Z" fill="#8a3fb0"/>
+<polyline points="960,122 972,122" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M972 116 L972 128 L980 122 Z" fill="#8a3fb0"/>
+<path d="M616 110 A12 12 0 0 1 616 134" stroke="#2563a8" stroke-width="2" fill="none"/>
+<path d="M628 98 A24 24 0 0 1 628 146" stroke="#2563a8" stroke-width="2" fill="none"/>
+<path d="M640 86 A36 36 0 0 1 640 158" stroke="#2563a8" stroke-width="2" fill="none"/>
+<text x="650" y="200" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">2.4 GHz, about 4-5 ms</text>
+<rect x="185" y="70" width="430" height="104" rx="10" fill="none" stroke="#6b7280" stroke-dasharray="6 5"/>
+<rect x="685" y="70" width="430" height="104" rx="10" fill="none" stroke="#6b7280" stroke-dasharray="6 5"/>
+<text x="195" y="62" font-size="12" text-anchor="start" font-weight="bold" fill="#6b7280">TRANSMITTER (plugs into the guitar, LiPo)</text>
+<text x="695" y="62" font-size="12" text-anchor="start" font-weight="bold" fill="#6b7280">RECEIVER (LiPo)</text>
+<text x="1040" y="200" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">P3: headphones, line in</text>
+<text x="1040" y="216" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">P10: with adapter, to the amp</text>
+</svg>

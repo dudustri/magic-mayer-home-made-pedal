@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 540" width="1040" height="540" role="img" aria-labelledby="title desc" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<title id="title">TS808 clipping stage</title>
+<desc id="desc">Non-inverting op-amp stage, first half of the JRC4558. Plus input from the input buffer. Minus input to Vref through 4.7 kilohm and 47 nanofarad, a high-pass at about 720 hertz that makes the mid hump. Feedback from output to minus input: 51 kilohm in series with the 500 kilohm DRIVE pot, in parallel with 51 picofarad and two 1N914 diodes in opposite directions. Gain 12 to 118.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="30" y="40" font-size="22" text-anchor="start" font-weight="bold" fill="#1f2937">TS808 clipping stage</text>
+<text x="30" y="64" font-size="13" text-anchor="start" font-weight="normal" fill="#6b7280">The heart of the Tube Screamer. Gain = 1 + (51k + DRIVE) / 4.7k = about 12x to 118x.</text>
+<path d="M420 300 L420 400 L520 350.0 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="426" y="332.0" font-size="15" text-anchor="start" font-weight="bold" fill="#1f2937">−</text>
+<text x="426" y="376.0" font-size="15" text-anchor="start" font-weight="bold" fill="#1f2937">+</text>
+<text x="414" y="322.0" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">2</text>
+<text x="414" y="366.0" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">3</text>
+<text x="524" y="343.0" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">1</text>
+<text x="420" y="292" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">U1A  JRC4558</text>
+<polyline points="400,450 400,371.0 420,371.0" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<rect x="325.0" y="450" width="150" height="20" rx="4" fill="#ffffff" stroke="#8a3fb0" stroke-width="1.5"/>
+<text x="400.0" y="464" font-size="12" text-anchor="middle" font-weight="bold" fill="#8a3fb0">from input buffer</text>
+<circle cx="380" cy="327.0" r="3.5" fill="#1f2937"/>
+<polyline points="380,327.0 420,327.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<rect x="310" y="320.0" width="40" height="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="330" y="314.0" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2937">R 4.7 kΩ</text>
+<polyline points="380,327.0 350,327.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="310,327.0 280,327.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M280 342.0 V353.0 M268 353.0 H292 M268 361.0 H292 M280 361.0 V372.0" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="298" y="354.0" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">C</text>
+<text x="298" y="369.0" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">47 nF</text>
+<polyline points="280,327.0 280,342.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="280,372.0 280,382.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<rect x="233.0" y="382.0" width="94" height="20" rx="4" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+<text x="280.0" y="396.0" font-size="12" text-anchor="middle" font-weight="bold" fill="#1f2937">Vref 4.5 V</text>
+<circle cx="580" cy="350.0" r="3.5" fill="#8a3fb0"/>
+<polyline points="520,350.0 640,350.0" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<rect x="640" y="340.0" width="118" height="20" rx="4" fill="#ffffff" stroke="#8a3fb0" stroke-width="1.5"/>
+<text x="699.0" y="354.0" font-size="12" text-anchor="middle" font-weight="bold" fill="#8a3fb0">to tone stage</text>
+<polyline points="380,327.0 380,95" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="580,350.0 580,95" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="380" cy="250" r="3.5" fill="#1f2937"/>
+<circle cx="580" cy="250" r="3.5" fill="#1f2937"/>
+<circle cx="380" cy="195" r="3.5" fill="#1f2937"/>
+<circle cx="580" cy="195" r="3.5" fill="#1f2937"/>
+<circle cx="380" cy="140" r="3.5" fill="#1f2937"/>
+<circle cx="580" cy="140" r="3.5" fill="#1f2937"/>
+<circle cx="380" cy="95" r="3.5" fill="#1f2937"/>
+<circle cx="580" cy="95" r="3.5" fill="#1f2937"/>
+<rect x="410" y="243" width="40" height="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="430" y="237" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2937">R 51 kΩ</text>
+<polyline points="380,250 410,250" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<rect x="500" y="243" width="40" height="14" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="520" y="237" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2937">DRIVE 500 kΩ A</text>
+<polyline points="450,250 500,250" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="540,250 580,250" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M465 195 H476 M476 183 V207 M484 183 V207 M484 195 H495" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="480" y="177" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2937">C 51 pF</text>
+<polyline points="380,195 465,195" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="495,195 580,195" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M465 140 H495 M473 132 L473 148 L487 140 Z M487 132 V148" stroke="#1f2937" stroke-width="2" fill="#ffffff"/>
+<text x="480" y="164" font-size="11" text-anchor="middle" font-weight="normal" fill="#6b7280"></text>
+<polyline points="380,140 465,140" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="495,140 580,140" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M465 95 H495 M487 87 L487 103 L473 95 Z M473 87 V103" stroke="#1f2937" stroke-width="2" fill="#ffffff"/>
+<text x="480" y="119" font-size="11" text-anchor="middle" font-weight="normal" fill="#6b7280"></text>
+<polyline points="380,95 465,95" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="495,95 580,95" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<text x="600" y="122" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">D1, D2 1N914, opposite directions</text>
+<text x="620" y="400" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">4.7 kΩ + 47 nF: high-pass at about 720 Hz = the mid hump</text>
+<text x="620" y="418" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">51 kΩ + DRIVE: sets the gain</text>
+<text x="620" y="436" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">51 pF: cuts high-frequency fizz</text>
+<text x="620" y="454" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Two diodes, opposite directions: soft, symmetric clipping</text>
+<line x1="30" y1="516" x2="54" y2="516" stroke="#c43d2f" stroke-width="3"/>
+<text x="60" y="520" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Power</text>
+<line x1="111.5" y1="516" x2="135.5" y2="516" stroke="#4b5563" stroke-width="3"/>
+<text x="141.5" y="520" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Ground</text>
+<line x1="200.5" y1="516" x2="224.5" y2="516" stroke="#8a3fb0" stroke-width="3"/>
+<text x="230.5" y="520" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Analog audio</text>
+<line x1="334.5" y1="516" x2="358.5" y2="516" stroke="#2563a8" stroke-width="3"/>
+<text x="364.5" y="520" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">I2S audio data and clocks</text>
+<line x1="566.0" y1="516" x2="590.0" y2="516" stroke="#2f8a4a" stroke-width="3"/>
+<text x="596.0" y="520" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">I2C setup</text>
+<line x1="677.5" y1="516" x2="701.5" y2="516" stroke="#b0731a" stroke-width="3"/>
+<text x="707.5" y="520" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">SPI radio</text>
+</svg>

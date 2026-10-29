@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 700" width="1240" height="700" role="img" aria-labelledby="title desc" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<title id="title">Transmitter, option A: XIAO nRF52840</title>
+<desc id="desc">Guitar plug P1 into the MCP6002 buffer, then C3 into WM8960 LINPUT1. WM8960 MCLK, BCLK, LRCK, ADCDAT, SDA, SCL connect to XIAO D0, D1, D2, D3, D4, D5. WM8960 and buffer run on the XIAO 3V3. LiPo battery through switch SW1 to the XIAO BAT+ and BAT- pads. Pins drawn in the XIAO&#x27;s real order: D0 to D6 on one side; 5V, GND, 3V3, D10 to D7 on the other; battery pads underneath. Labels with the same name (3V3, Vref, CE) are connected.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="30" y="40" font-size="22" text-anchor="start" font-weight="bold" fill="#1f2937">Transmitter, option A: XIAO nRF52840</text>
+<text x="30" y="64" font-size="13" text-anchor="start" font-weight="normal" fill="#6b7280">WM8960 is the I2S clock master. XIAO D0 gives it a 16 MHz MCK. Status: RGB LED on the XIAO.</text>
+<rect x="30" y="180" width="110" height="110" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="85.0" y="202" font-size="15" text-anchor="middle" font-weight="bold" fill="#1f2937">P1</text>
+<text x="85.0" y="220" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">6.35 mm plug</text>
+<line x1="140" y1="245" x2="160" y2="245" stroke="#1f2937" stroke-width="2"/>
+<text x="132" y="249" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">Tip</text>
+<line x1="140" y1="275" x2="160" y2="275" stroke="#1f2937" stroke-width="2"/>
+<text x="132" y="279" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">Sleeve</text>
+<path d="M160 275 V285 M148 285 H172 M152 290 H168 M156 295 H164" stroke="#4b5563" stroke-width="2" fill="none"/>
+<polyline points="160,245 200,245" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="200" cy="245" r="3.5" fill="#8a3fb0"/>
+<rect x="193" y="275" width="14" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="214" y="292" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">R1</text>
+<text x="214" y="307" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">1 MΩ</text>
+<polyline points="200,245 200,275" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="200,315 200,325" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M200 325 V335 M188 335 H212 M192 340 H208 M196 345 H204" stroke="#4b5563" stroke-width="2" fill="none"/>
+<path d="M230 245 H241 M241 233 V257 M249 233 V257 M249 245 H260" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="245" y="227" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2937">C1 100 nF</text>
+<polyline points="200,245 230,245" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M360 178 L360 273 L455 225.5 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="366" y="208.65" font-size="15" text-anchor="start" font-weight="bold" fill="#1f2937">−</text>
+<text x="366" y="250.45" font-size="15" text-anchor="start" font-weight="bold" fill="#1f2937">+</text>
+<text x="354" y="198.65" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">2</text>
+<text x="354" y="240.45" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">3</text>
+<text x="459" y="218.5" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">1</text>
+<text x="360" y="170" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">U3A  MCP6002</text>
+<polyline points="260,245 360,245" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="300" cy="245" r="3.5" fill="#8a3fb0"/>
+<rect x="293" y="285" width="14" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="314" y="302" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">R2</text>
+<text x="314" y="317" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">1 MΩ</text>
+<polyline points="300,245 300,285" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="300,325 300,370" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="455,225.5 490,225.5" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="490" cy="225.5" r="3.5" fill="#8a3fb0"/>
+<polyline points="490,225.5 490,140 340,140 340,203.65 360,203.65" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M515 225.5 H526 M526 213.5 V237.5 M534 213.5 V237.5 M534 225.5 H545" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="530" y="207.5" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2937">C3 1 µF</text>
+<polyline points="490,225.5 515,225.5" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="300,370 490,370" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="300" cy="370" r="3.5" fill="#1f2937"/>
+<circle cx="400" cy="370" r="3.5" fill="#1f2937"/>
+<circle cx="460" cy="370" r="3.5" fill="#1f2937"/>
+<text x="306" y="362" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Vref 1.65 V</text>
+<rect x="393" y="300" width="14" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="414" y="317" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">R3</text>
+<text x="414" y="332" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">100 kΩ</text>
+<rect x="381.0" y="280" width="38" height="20" rx="4" fill="#ffffff" stroke="#c43d2f" stroke-width="1.5"/>
+<text x="400.0" y="294" font-size="12" text-anchor="middle" font-weight="bold" fill="#c43d2f">3V3</text>
+<polyline points="400,340 400,370" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<rect x="393" y="390" width="14" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="414" y="407" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">R4</text>
+<text x="414" y="422" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">100 kΩ</text>
+<polyline points="400,370 400,390" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="400,430 400,440" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M400 440 V450 M388 450 H412 M392 455 H408 M396 460 H404" stroke="#4b5563" stroke-width="2" fill="none"/>
+<path d="M460 385 V396 M448 396 H472 M448 404 H472 M460 404 V415" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="478" y="397" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">C2</text>
+<text x="478" y="412" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">10 µF</text>
+<text x="438" y="395" font-size="14" text-anchor="start" font-weight="bold" fill="#1f2937">+</text>
+<polyline points="460,370 460,385" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="460,415 460,425" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M460 425 V435 M448 435 H472 M452 440 H468 M456 445 H464" stroke="#4b5563" stroke-width="2" fill="none"/>
+<rect x="490" y="360" width="46" height="20" rx="4" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+<text x="513.0" y="374" font-size="12" text-anchor="middle" font-weight="bold" fill="#1f2937">Vref</text>
+<path d="M520 560 L520 630 L590 595.0 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="526" y="583.9" font-size="15" text-anchor="start" font-weight="bold" fill="#1f2937">−</text>
+<text x="526" y="614.7" font-size="15" text-anchor="start" font-weight="bold" fill="#1f2937">+</text>
+<text x="514" y="573.9" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">6</text>
+<text x="514" y="604.7" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">5</text>
+<text x="594" y="588.0" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">7</text>
+<text x="520" y="552" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937"></text>
+<text x="520" y="652" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">U3B  unused half</text>
+<polyline points="495,609.7 520,609.7" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<rect x="449" y="599.7" width="46" height="20" rx="4" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+<text x="472.0" y="613.7" font-size="12" text-anchor="middle" font-weight="bold" fill="#1f2937">Vref</text>
+<polyline points="590,595.0 605,595.0 605,545 505,545 505,578.9 520,578.9" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<rect x="180" y="470" width="110" height="110" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="235.0" y="492" font-size="15" text-anchor="middle" font-weight="bold" fill="#1f2937">U3</text>
+<text x="235.0" y="510" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">MCP6002 supply</text>
+<line x1="290" y1="535" x2="310" y2="535" stroke="#1f2937" stroke-width="2"/>
+<text x="282" y="539" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">8  V+</text>
+<line x1="290" y1="565" x2="310" y2="565" stroke="#1f2937" stroke-width="2"/>
+<text x="282" y="569" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">4  V−</text>
+<polyline points="310,535 350,535" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="350" cy="535" r="3.5" fill="#c43d2f"/>
+<rect x="331.0" y="511" width="38" height="20" rx="4" fill="#ffffff" stroke="#c43d2f" stroke-width="1.5"/>
+<text x="350.0" y="525" font-size="12" text-anchor="middle" font-weight="bold" fill="#c43d2f">3V3</text>
+<path d="M390 540 V551 M378 551 H402 M378 559 H402 M390 559 V570" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="408" y="552" font-size="12" text-anchor="start" font-weight="bold" fill="#1f2937">C4</text>
+<text x="408" y="567" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">100 nF</text>
+<polyline points="350,535 390,535 390,540" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<path d="M390 570 V580 M378 580 H402 M382 585 H398 M386 590 H394" stroke="#4b5563" stroke-width="2" fill="none"/>
+<polyline points="310,565 330,565" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<path d="M330 565 V575 M318 575 H342 M322 580 H338 M326 585 H334" stroke="#4b5563" stroke-width="2" fill="none"/>
+<rect x="620" y="160" width="170" height="230" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="705.0" y="182" font-size="15" text-anchor="middle" font-weight="bold" fill="#1f2937">U2</text>
+<text x="705.0" y="200" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">WM8960 module</text>
+<line x1="600" y1="225" x2="620" y2="225" stroke="#1f2937" stroke-width="2"/>
+<text x="628" y="229" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">LINPUT1</text>
+<line x1="600" y1="255" x2="620" y2="255" stroke="#1f2937" stroke-width="2"/>
+<text x="628" y="259" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">VCC</text>
+<line x1="600" y1="285" x2="620" y2="285" stroke="#1f2937" stroke-width="2"/>
+<text x="628" y="289" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">GND</text>
+<line x1="790" y1="225" x2="810" y2="225" stroke="#1f2937" stroke-width="2"/>
+<text x="782" y="229" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">MCLK</text>
+<line x1="790" y1="255" x2="810" y2="255" stroke="#1f2937" stroke-width="2"/>
+<text x="782" y="259" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">BCLK</text>
+<line x1="790" y1="285" x2="810" y2="285" stroke="#1f2937" stroke-width="2"/>
+<text x="782" y="289" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">LRCK</text>
+<line x1="790" y1="315" x2="810" y2="315" stroke="#1f2937" stroke-width="2"/>
+<text x="782" y="319" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">ADCDAT</text>
+<line x1="790" y1="345" x2="810" y2="345" stroke="#1f2937" stroke-width="2"/>
+<text x="782" y="349" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">SDA</text>
+<line x1="790" y1="375" x2="810" y2="375" stroke="#1f2937" stroke-width="2"/>
+<text x="782" y="379" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">SCL</text>
+<polyline points="600,255 580,255" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<rect x="542" y="245" width="38" height="20" rx="4" fill="#ffffff" stroke="#c43d2f" stroke-width="1.5"/>
+<text x="561.0" y="259" font-size="12" text-anchor="middle" font-weight="bold" fill="#c43d2f">3V3</text>
+<polyline points="600,285 590,285" fill="none" stroke="#4b5563" stroke-width="2" stroke-linejoin="round"/>
+<path d="M590 285 V295 M578 295 H602 M582 300 H598 M586 305 H594" stroke="#4b5563" stroke-width="2" fill="none"/>
+<polyline points="545,225.5 600,225" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
+<rect x="900" y="160" width="170" height="286" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
+<text x="985.0" y="182" font-size="15" text-anchor="middle" font-weight="bold" fill="#1f2937">U1</text>
+<text x="985.0" y="200" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">XIAO nRF52840</text>
+<line x1="880" y1="225" x2="900" y2="225" stroke="#1f2937" stroke-width="2"/>
+<text x="908" y="229" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">D0</text>
+<line x1="880" y1="255" x2="900" y2="255" stroke="#1f2937" stroke-width="2"/>
+<text x="908" y="259" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">D1</text>
+<line x1="880" y1="285" x2="900" y2="285" stroke="#1f2937" stroke-width="2"/>
+<text x="908" y="289" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">D2</text>
+<line x1="880" y1="315" x2="900" y2="315" stroke="#1f2937" stroke-width="2"/>
+<text x="908" y="319" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">D3</text>
+<line x1="880" y1="345" x2="900" y2="345" stroke="#1f2937" stroke-width="2"/>
+<text x="908" y="349" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">D4</text>
+<line x1="880" y1="375" x2="900" y2="375" stroke="#1f2937" stroke-width="2"/>
+<text x="908" y="379" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">D5</text>
+<line x1="880" y1="405" x2="900" y2="405" stroke="#1f2937" stroke-width="2"/>
+<text x="908" y="409" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2937">D6</text>
+<line x1="1070" y1="225" x2="1090" y2="225" stroke="#1f2937" stroke-width="2"/>
+<text x="1062" y="229" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">5V</text>
+<line x1="1070" y1="255" x2="1090" y2="255" stroke="#1f2937" stroke-width="2"/>
+<text x="1062" y="259" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">GND</text>
+<line x1="1070" y1="285" x2="1090" y2="285" stroke="#1f2937" stroke-width="2"/>
+<text x="1062" y="289" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">3V3</text>
+<line x1="1070" y1="315" x2="1090" y2="315" stroke="#1f2937" stroke-width="2"/>
+<text x="1062" y="319" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">D10</text>
+<line x1="1070" y1="345" x2="1090" y2="345" stroke="#1f2937" stroke-width="2"/>
+<text x="1062" y="349" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">D9</text>
+<line x1="1070" y1="375" x2="1090" y2="375" stroke="#1f2937" stroke-width="2"/>
+<text x="1062" y="379" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">D8</text>
+<line x1="1070" y1="405" x2="1090" y2="405" stroke="#1f2937" stroke-width="2"/>
+<text x="1062" y="409" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2937">D7</text>
+<line x1="957" y1="446" x2="957" y2="466" stroke="#1f2937" stroke-width="2"/>
+<text x="957" y="438" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2937">BAT+</text>
+<line x1="1013" y1="446" x2="1013" y2="466" stroke="#1f2937" stroke-width="2"/>
+<text x="1013" y="438" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2937">BAT−</text>
+<polyline points="810,225 880,225" fill="none" stroke="#2563a8" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="810,255 880,255" fill="none" stroke="#2563a8" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="810,285 880,285" fill="none" stroke="#2563a8" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="810,315 880,315" fill="none" stroke="#2563a8" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="810,345 880,345" fill="none" stroke="#2f8a4a" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="810,375 880,375" fill="none" stroke="#2f8a4a" stroke-width="2" stroke-linejoin="round"/>
+<path d="M1085 220 L1095 230 M1085 230 L1095 220" stroke="#6b7280" stroke-width="2"/>
+<polyline points="1090,255 1150,255" fill="none" stroke="#4b5563" stroke-width="2" stroke-linejoin="round"/>
+<path d="M1150 255 V265 M1138 265 H1162 M1142 270 H1158 M1146 275 H1154" stroke="#4b5563" stroke-width="2" fill="none"/>
+<rect x="1090" y="275" width="38" height="20" rx="4" fill="#ffffff" stroke="#c43d2f" stroke-width="1.5"/>
+<text x="1109.0" y="289" font-size="12" text-anchor="middle" font-weight="bold" fill="#c43d2f">3V3</text>
+<polyline points="957,466 957,476" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="957" cy="480" r="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><circle cx="957" cy="512" r="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/><path d="M957 509 L973 484" stroke="#1f2937" stroke-width="2"/>
+<text x="945" y="496" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937">SW1</text>
+<text x="945" y="510" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">power</text>
+<polyline points="957,516 957,532" fill="none" stroke="#c43d2f" stroke-width="2" stroke-linejoin="round"/>
+<path d="M957 532 V546 M941 546 H973 M948 554 H966 M957 554 V568" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="979" y="545" font-size="14" text-anchor="start" font-weight="bold" fill="#1f2937">+</text>
+<text x="933" y="548" font-size="12" text-anchor="end" font-weight="bold" fill="#1f2937">BT1</text>
+<text x="933" y="562" font-size="11" text-anchor="end" font-weight="normal" fill="#6b7280">LiPo 1S 300-500 mAh</text>
+<polyline points="957,568 957,586 1013,586 1013,466" fill="none" stroke="#4b5563" stroke-width="2" stroke-linejoin="round"/>
+<path d="M875 400 L885 410 M875 410 L885 400" stroke="#6b7280" stroke-width="2"/>
+<path d="M1085 310 L1095 320 M1085 320 L1095 310" stroke="#6b7280" stroke-width="2"/>
+<path d="M1085 340 L1095 350 M1085 350 L1095 340" stroke="#6b7280" stroke-width="2"/>
+<path d="M1085 370 L1095 380 M1085 380 L1095 370" stroke="#6b7280" stroke-width="2"/>
+<path d="M1085 400 L1095 410 M1085 410 L1095 400" stroke="#6b7280" stroke-width="2"/>
+<line x1="30" y1="676" x2="54" y2="676" stroke="#c43d2f" stroke-width="3"/>
+<text x="60" y="680" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Power</text>
+<line x1="111.5" y1="676" x2="135.5" y2="676" stroke="#4b5563" stroke-width="3"/>
+<text x="141.5" y="680" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Ground</text>
+<line x1="200.5" y1="676" x2="224.5" y2="676" stroke="#8a3fb0" stroke-width="3"/>
+<text x="230.5" y="680" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">Analog audio</text>
+<line x1="334.5" y1="676" x2="358.5" y2="676" stroke="#2563a8" stroke-width="3"/>
+<text x="364.5" y="680" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">I2S audio data and clocks</text>
+<line x1="566.0" y1="676" x2="590.0" y2="676" stroke="#2f8a4a" stroke-width="3"/>
+<text x="596.0" y="680" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">I2C setup</text>
+<line x1="677.5" y1="676" x2="701.5" y2="676" stroke="#b0731a" stroke-width="3"/>
+<text x="707.5" y="680" font-size="12" text-anchor="start" font-weight="normal" fill="#6b7280">SPI radio</text>
+</svg>
