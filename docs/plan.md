@@ -17,15 +17,16 @@ Do them in this order. Each folder has its own readme with schematics, parts and
 | Step | Project | What it is | Status |
 |---|---|---|---|
 | 0 | [Tone Lab](../tone-lab/readme.md) | PC app and simulator running `pedal.h` | Done; tune presets |
-| 1 | [Wireless guitar system](../wireless-guitar-system/readme.md) | Battery transmitter on the guitar, receiver at the amp, about 4-5 ms | Next |
-| 2 | [Digital pedal](../digital-pedal/readme.md) | ESP32 box running all three effects from `pedal.h` | Planned |
+| 1 | [Wireless guitar system](../wireless-guitar-system/readme.md) | Battery transmitter on the guitar (ESP32-C3 + nRF24), receiver at the amp (ESP32-S3 + nRF24), about 4-5 ms | Next |
+| 2 | [Digital pedal](../digital-pedal/readme.md) | The step 1 receiver grows into a pedal: ESP32-S3 running all three effects from `pedal.h`, cable or wireless input | Planned |
 | 3 | [Analog pedals](../analog-pedals/readme.md) | Real Tube Screamer (then Klon, Katana) circuits, one box each | Postponed |
 
 Shopping: [shopping-list.md](../shopping-list.md) covers tools, step 1 and step 2, with prices. Step 3 has its own list in [analog-pedals/](../analog-pedals/shopping-list.md). AliExpress takes 2-3 weeks: order for the next step while building the current one.
 
 ```
-Wireless:   Guitar -> transmitter (buffer, ADC, radio) ~~ 2.4 GHz ~~> receiver (radio, DAC) -> amp
-Digital:    Guitar -> TL072 buffer -> PCM1808 -> ESP32 (pedal.h) -> PCM5102A -> volume -> amp
+Wireless:   Guitar -> transmitter (buffer, WM8960, ESP32-C3, nRF24) ~~ 2.4 GHz ~~> receiver (nRF24, ESP32-S3, WM8960) -> amp
+Digital:    Guitar -> TL072 buffer -> PCM1808 --+
+            Wireless -> nRF24 ------------------+-> ESP32-S3 (pedal.h) -> PCM5102A -> volume -> amp
 Analog:     Guitar -> [TS808] -> [Klon]* -> [Katana]* -> amp                       * optional
 PC (done):  recording -> Tone Lab / sim (same pedal.h) -> presets/*.cfg -> copied into the firmware
 ```

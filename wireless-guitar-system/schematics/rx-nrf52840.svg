@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 640" width="1240" height="640" role="img" aria-labelledby="title desc" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
-<title id="title">Receiver, option A: XIAO nRF52840</title>
+<title id="title">Alternative receiver: XIAO nRF52840</title>
 <desc id="desc">WM8960 headphone outputs HP_L and HP_R through 47 ohm resistors R1 and R2 to the tip and ring of the 3.5 mm plug; headphone ground to the sleeve. WM8960 MCLK, BCLK, LRCK, DACDAT, SDA, SCL connect to XIAO D0 to D5. LiPo battery through SW1 to the XIAO battery pads. Pins drawn in the XIAO&#x27;s real order: D0 to D6 on one side; 5V, GND, 3V3, D10 to D7 on the other; battery pads underneath. Labels with the same name (3V3, Vref, CE) are connected.</desc>
 <rect width="100%" height="100%" fill="#ffffff"/>
-<text x="30" y="40" font-size="22" text-anchor="start" font-weight="bold" fill="#1f2937">Receiver, option A: XIAO nRF52840</text>
+<text x="30" y="40" font-size="22" text-anchor="start" font-weight="bold" fill="#1f2937">Alternative receiver: XIAO nRF52840</text>
 <text x="30" y="64" font-size="13" text-anchor="start" font-weight="normal" fill="#6b7280">Same as the transmitter, but D3 sends audio to the WM8960 and its headphone amp drives the plug.</text>
 <rect x="620" y="160" width="170" height="230" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
 <text x="705.0" y="182" font-size="15" text-anchor="middle" font-weight="bold" fill="#1f2937">U2</text>

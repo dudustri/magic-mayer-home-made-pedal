@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 250" width="1180" height="250" role="img" aria-labelledby="title desc" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
 <title id="title">Wireless guitar system overview</title>
-<desc id="desc">Guitar, then the transmitter: buffer, WM8960 ADC, XIAO with radio. Radio link at 2.4 GHz. Receiver: XIAO with radio, WM8960 DAC and headphone amp, then a 3.5 mm plug to headphones or a line input, or through an adapter to a 6.35 mm amp input.</desc>
+<desc id="desc">Guitar, then the transmitter: buffer, WM8960 ADC, XIAO ESP32-C3 with an nRF24 radio. Radio link at 2.4 GHz. Receiver: ESP32-S3 with an nRF24 radio, WM8960 DAC and headphone amp, then a 3.5 mm jack for headphones or a line input, and a 6.35 mm jack for the amp. The receiver later becomes the digital pedal.</desc>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="20" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
 <text x="80" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Guitar</text>
@@ -13,16 +13,16 @@
 <text x="400" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">WM8960</text>
 <rect x="480" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
 <text x="540" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Radio</text>
-<text x="540" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">XIAO</text>
+<text x="540" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">ESP32-C3 + nRF24</text>
 <rect x="700" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
 <text x="760" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Radio</text>
-<text x="760" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">XIAO</text>
+<text x="760" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">ESP32-S3 + nRF24</text>
 <rect x="840" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
 <text x="900" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">DAC + amp</text>
 <text x="900" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">WM8960</text>
 <rect x="980" y="90" width="120" height="64" rx="6" fill="#f6f8fa" stroke="#1f2937" stroke-width="2"/>
 <text x="1040" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2937">Output</text>
-<text x="1040" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">3.5 mm plug</text>
+<text x="1040" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">3.5 + 6.35 mm</text>
 <polyline points="140,122 192,122" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
 <path d="M192 116 L192 128 L200 122 Z" fill="#8a3fb0"/>
 <polyline points="320,122 332,122" fill="none" stroke="#8a3fb0" stroke-width="2" stroke-linejoin="round"/>
@@ -40,7 +40,7 @@
 <rect x="185" y="70" width="430" height="104" rx="10" fill="none" stroke="#6b7280" stroke-dasharray="6 5"/>
 <rect x="685" y="70" width="430" height="104" rx="10" fill="none" stroke="#6b7280" stroke-dasharray="6 5"/>
 <text x="195" y="62" font-size="12" text-anchor="start" font-weight="bold" fill="#6b7280">TRANSMITTER (plugs into the guitar, LiPo)</text>
-<text x="695" y="62" font-size="12" text-anchor="start" font-weight="bold" fill="#6b7280">RECEIVER (LiPo)</text>
+<text x="695" y="62" font-size="12" text-anchor="start" font-weight="bold" fill="#6b7280">RECEIVER (USB power, later the digital pedal)</text>
 <text x="1040" y="200" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">P3: headphones, line in</text>
-<text x="1040" y="216" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">P10: with adapter, to the amp</text>
+<text x="1040" y="216" font-size="12" text-anchor="middle" font-weight="normal" fill="#6b7280">P10: amp</text>
 </svg>

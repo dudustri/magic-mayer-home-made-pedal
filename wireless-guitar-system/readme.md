@@ -2,48 +2,55 @@
 
 **Step 1 of the project.**
 
-A cable replacement for the guitar. A small **transmitter** plugs straight into the guitar. A small **receiver** plugs into headphones or a line input (3.5 mm, "P3"), or into the amp (6.35 mm, "P10") with a push-on adapter. Both run on a small rechargeable battery inside a 3D-printed case. Only the plug sticks out.
+A cable replacement for the guitar. A small battery **transmitter** plugs straight into the guitar. The **receiver** sits at the amp, PC or headphones and has both a 3.5 mm jack ("P3") and a 6.35 mm jack ("P10"). The receiver uses an ESP32-S3, which later becomes the [digital pedal](../digital-pedal/readme.md): the same board receives the guitar by radio and plays the effects.
 
-![Block diagram. Transmitter: guitar, buffer, WM8960 ADC, XIAO radio. 2.4 GHz link, about 4 to 5 ms. Receiver: XIAO radio, WM8960 DAC and amp, 3.5 mm plug. P3 for headphones or line in, P10 with an adapter to the amp.](schematics/system-overview.svg)
+![Block diagram. Transmitter: guitar, MCP6002 buffer, WM8960 ADC, XIAO ESP32-C3 with nRF24 radio. 2.4 GHz link, about 4 to 5 ms. Receiver: ESP32-S3 with nRF24 radio, WM8960 DAC and headphone amp, 3.5 mm and 6.35 mm jacks.](schematics/system-overview.svg)
 
 | | |
 |---|---|
 | Latency | About 4-5 ms (estimate), like standing 1.5 m from the amp |
-| Battery | 300-500 mAh LiPo per side, charged over USB-C |
+| Audio | 32 kHz, 16-bit: sound up to 16 kHz, enough for guitar |
+| Transmitter battery | About 7 h on 400 mAh, about 10 h on 600 mAh (estimate). Charged over USB-C |
+| Receiver power | USB-C: power bank, charger or PC. Inside the pedal later: the pedal's 9 V |
 | Range | About 10 m indoors (estimate) |
-| Parts cost | About 60 EUR for both sides (about 40 EUR with the cheaper options in the shopping list), without spares or tools |
-| Parts list | [shopping-list.md](../shopping-list.md), section 8 (option A) or 9 (option B) |
+| Parts cost | About 50 EUR for both sides, without spares or tools |
+| Software | Arduino / PlatformIO and the `RF24` library on both sides, like the pedal |
+| Parts list | [shopping-list.md](../shopping-list.md), section 8 |
 
-Want it working today instead? A ready-made 2.4/5.8 GHz set costs 25-40 EUR on AliExpress (search "guitar wireless system 5.8GHz"). This project is for learning and for later joining it to the pedal.
+Want it working today instead? A ready-made 2.4/5.8 GHz set costs 25-40 EUR on AliExpress (search "guitar wireless system 5.8GHz").
 
 ## Contents
 
-1. [Choose an option](#1-choose-an-option)
+1. [The design](#1-the-design)
 2. [How the signal travels](#2-how-the-signal-travels)
 3. [The input buffer, explained](#3-the-input-buffer-explained)
 4. [Schematics](#4-schematics)
 5. [Parts](#5-parts)
-6. [Build: breadboard, soldered board, case](#6-build-breadboard-soldered-board-case)
+6. [Build](#6-build)
 7. [Firmware](#7-firmware)
 8. [Problems and fixes](#8-problems-and-fixes)
-9. [Not verified yet](#9-not-verified-yet)
+9. [Alternative: nRF52840 for a longer battery life](#9-alternative-nrf52840-for-a-longer-battery-life)
+10. [Not verified yet](#10-not-verified-yet)
 
 ---
 
-## 1. Choose an option
+## 1. The design
 
-Both options use the same audio parts (WM8960 codec, MCP6002 buffer), the same battery, plugs and case. Only the brain and the radio differ.
-
-| | **Option A: XIAO nRF52840** (recommended) | **Option B: XIAO ESP32-C3 + nRF24L01+** |
+| | Transmitter (on the guitar) | Receiver (at the amp) |
 |---|---|---|
-| Boards per side | 1 | 2 |
-| Audio | 48 kHz, 16-bit, lost packets resent | 32 kHz, 16-bit, no resends (the nRF24 sends only 32 bytes per packet) |
-| Latency (estimate) | About 4.5 ms | About 4 ms |
-| Battery life, 400 mAh (estimate) | 13-20 h | About 7 h |
-| Status LED | RGB LED on the XIAO | None (every pin is used). Status over USB serial |
-| Programming | nRF Connect SDK (Zephyr). New to learn | Arduino / PlatformIO, same as the pedal |
+| Processor | Seeed XIAO ESP32-C3: tiny, has a LiPo charger | ESP32-S3 DevKitC-1 (N16R8): powerful, runs the effects later |
+| Radio | nRF24L01+ mini module (SPI) | nRF24L01+ module (SPI) |
+| Audio | MCP6002 buffer + WM8960 (ADC) | WM8960 (DAC + headphone amp) |
+| Connector | 6.35 mm male plug, straight into the guitar | 3.5 mm and 6.35 mm jacks, same signal on both |
+| Power | LiPo 1S 400-600 mAh, slide switch | USB-C |
+| Box | Small 3D-printed case, only the plug sticks out | Any box. Later: the pedal enclosure |
 
-Choose A for battery life and fewer parts. Choose B to stay with Arduino.
+Why this design:
+
+- **One toolset.** Both sides and the pedal use Arduino / PlatformIO. No second programming environment to learn.
+- **The radio does one job.** The nRF24 sends raw packets in under 1 ms. The ESP32 Wi-Fi radios stay off: less power, less noise.
+- **The receiver grows into the pedal.** The ESP32-S3 has the power and memory for the effects (and later delay and reverb). Its receiver code is reused in the pedal unchanged.
+- **Clean sound.** With every effect off, the pedal passes the clean guitar through.
 
 ### Why not Bluetooth?
 
@@ -54,25 +61,25 @@ Distance is not what makes a link slow. Radio covers 10 m in about 0.00003 ms. T
 | Bluetooth headphones (A2DP) | 100-200 ms |
 | Bluetooth LE Audio | 20-40 ms |
 | Bluetooth LE, own data | At least 7.5 ms per message, the shortest interval BLE allows |
-| Nordic ESB (option A) or nRF24 (option B) | Under 1 ms per packet |
+| nRF24L01+ (this design) | Under 1 ms per packet |
 
-"Almost instant" Bluetooth usually means a short connection interval, at its best 7.5 ms just for the radio. Option A uses the same radio chip as Bluetooth LE (the nRF52840), but with Nordic's simpler protocol, which has no fixed interval.
+"Almost instant" Bluetooth usually means a short connection interval, at its best 7.5 ms just for the radio. The nRF24L01+ sends raw packets with no fixed interval.
 
 ## 2. How the signal travels
 
 1. **Buffer:** the MCP6002 copies the guitar signal without loading the pickups ([section 3](#3-the-input-buffer-explained)).
-2. **ADC:** the WM8960 turns it into numbers: 48,000 per second (option A).
-3. **Radio:** the XIAO packs 48 numbers (1 ms of sound) into a packet and sends it. The receiver confirms each packet. A lost packet is sent again.
-4. **Jitter buffer:** the receiver keeps 2 packets in stock, so a late packet does not cause a click.
-5. **DAC:** the receiver's WM8960 turns the numbers back into sound. Its headphone amp drives the plug.
+2. **ADC:** the WM8960 turns it into numbers, 32,000 per second.
+3. **Radio:** the ESP32-C3 packs 15 numbers (0.47 ms of sound) plus a packet number into one 32-byte nRF24 packet and sends it. About 2,100 packets per second. No resends: a resend would arrive too late.
+4. **Jitter buffer:** the receiver keeps 4 packets (about 2 ms) in stock, so a late packet does not click. A lost packet is replaced by the previous one, faded out.
+5. **DAC:** the receiver's WM8960 turns the numbers back into sound. Its headphone amp drives both jacks.
 
 | Step | Time |
 |---|---|
-| Fill one packet | 1.0 ms |
-| Radio, with one resend | About 0.5 ms |
-| Jitter buffer, 2 packets | 2.0 ms |
-| Converter buffers | About 1 ms |
-| **Total** | **About 4.5 ms** |
+| Fill one packet | 0.5 ms |
+| Radio | About 0.3 ms |
+| Jitter buffer, 4 packets | 1.9 ms |
+| Converter buffers | About 1-2 ms |
+| **Total** | **About 4-5 ms** |
 
 ## 3. The input buffer, explained
 
@@ -99,104 +106,77 @@ The guitar sees R1 and R2 in parallel: 500 kOhm, the same as most overdrive peda
 
 ## 4. Schematics
 
-Each drawing is a complete board. Labels with the same name (`3V3`, `Vref`, `CE`) are connected. The XIAO pins are drawn in their real order, as printed on the board. The SVG files are in [schematics/](schematics/).
+Labels with the same name (`3V3`, `Vref`, `CE`, `SCK`) are connected. The XIAO pins are drawn in their real order; the ESP32-S3 pins in logical order.
 
-### Option A: transmitter
+### Transmitter
 
-![Option A transmitter schematic. Guitar plug, MCP6002 buffer and C3 into WM8960 LINPUT1. WM8960 MCLK, BCLK, LRCK, ADCDAT, SDA, SCL to XIAO nRF52840 D0 to D5. LiPo through switch SW1 to the XIAO battery pads. WM8960 and buffer powered from the XIAO 3V3.](schematics/tx-option-a.svg)
+![Transmitter schematic. Guitar plug, MCP6002 buffer and C3 into WM8960 LINPUT1. WM8960 MCLK, BCLK, LRCK, ADCDAT, SDA, SCL to XIAO ESP32-C3 D0 to D5. nRF24L01+: D10 MOSI, D9 MISO, D8 SCK, D7 CSN with a 10 kilohm pull-up, D6 CE, with 10 microfarad and 100 nanofarad on its power pins. LiPo through switch SW1 to the XIAO battery pads.](schematics/tx.svg)
 
-### Option A: receiver
+### Receiver
 
-![Option A receiver schematic. XIAO nRF52840 D0 to D5 to WM8960 MCLK, BCLK, LRCK, DACDAT, SDA, SCL. WM8960 HP_L and HP_R through 47 ohm resistors to the tip and ring of the 3.5 mm plug, headphone ground to the sleeve. LiPo through SW1 to the battery pads.](schematics/rx-option-a.svg)
+![Receiver schematic. ESP32-S3 GPIO14, 13, 12, 11, 8, 9 to WM8960 MCLK, BCLK, LRCK, DACDAT, SDA, SCL. nRF24L01+ on GPIO39 CE, 40 CSN, 41 SCK, 42 MOSI, 47 MISO. WM8960 HP_L and HP_R through 47 ohm to the 3.5 mm jack; HP_L also to the 6.35 mm jack. Powered over USB-C.](schematics/rx.svg)
 
-### Option B: transmitter
+### Connection list
 
-![Option B transmitter schematic. Same buffer and WM8960 as option A, with a XIAO ESP32-C3. nRF24L01+ radio: XIAO D10 to MOSI, D9 to MISO, D8 to SCK, D7 to CSN with a 10 kilohm pull-up to 3V3, D6 to CE. 10 microfarad and 100 nanofarad capacitors on the nRF24 power pins.](schematics/tx-option-b.svg)
-
-### Option B: receiver
-
-![Option B receiver schematic. Same as the option A receiver with a XIAO ESP32-C3, plus the nRF24L01+ radio wired as in the option B transmitter.](schematics/rx-option-b.svg)
-
-### Connection list (all four boards)
-
-The same list as text, to tick off while soldering.
-
-| XIAO pin | Goes to | Signal | Notes |
+| Signal | Transmitter: XIAO ESP32-C3 | Receiver: ESP32-S3 | Goes to |
 |---|---|---|---|
-| D0 | WM8960 MCLK | I2S master clock | Option A: 16 MHz, the WM8960 PLL makes 48 kHz. Option B: 12.288 MHz |
-| D1 | WM8960 BCLK | I2S bit clock | Option A: from the WM8960. Option B: from the XIAO |
-| D2 | WM8960 LRCK (ADCLRC / DACLRC) | I2S word clock | Same direction as BCLK. Some modules join ADCLRC and DACLRC |
-| D3 | WM8960 ADCDAT (transmitter) or DACDAT (receiver) | Audio data | |
-| D4 | WM8960 SDA | I2C data | Setup only. Most modules have pull-ups |
-| D5 | WM8960 SCL | I2C clock | |
-| D6 | nRF24 CE | Radio enable | Option B only |
-| D7 | nRF24 CSN | SPI chip select | Option B only. 10 kOhm pull-up to 3V3 (R6) |
-| D8 | nRF24 SCK | SPI clock | Option B only |
-| D9 | nRF24 MISO | SPI data in | Option B only |
-| D10 | nRF24 MOSI | SPI data out | Option B only |
-| 3V3 | WM8960 VCC, MCP6002 pin 8, R3, nRF24 VCC | 3.3 V | |
-| GND | Everything's ground | | One ground point |
-| BAT+ / BAT- (pads underneath) | LiPo + through SW1 / LiPo - | Battery | The XIAO charges the battery over USB-C |
-| 5V | Not connected | | |
+| I2S master clock (MCLK) | D0 | GPIO14 | WM8960 MCLK |
+| I2S bit clock | D1 | GPIO13 | WM8960 BCLK |
+| I2S word clock | D2 | GPIO12 | WM8960 LRCK (ADCLRC / DACLRC) |
+| Audio data | D3 (from ADCDAT) | GPIO11 (to DACDAT) | WM8960 |
+| I2C data / clock | D4 / D5 | GPIO8 / GPIO9 | WM8960 SDA / SCL (setup only) |
+| nRF24 CE | D6 | GPIO39 | nRF24 CE |
+| nRF24 CSN | D7, 10 kOhm pull-up to 3V3 | GPIO40 | nRF24 CSN |
+| SPI clock | D8 | GPIO41 | nRF24 SCK |
+| SPI MISO | D9 | GPIO47 | nRF24 MISO |
+| SPI MOSI | D10 | GPIO42 | nRF24 MOSI |
+| 3.3 V | 3V3 | 3V3 | WM8960 VCC, nRF24 VCC (+10 uF and 100 nF at its pins), MCP6002 |
+| Power in | LiPo on the BAT pads, through SW1 | USB-C | |
 
-| Other wires | |
-|---|---|
-| Transmitter: plug tip -> buffer (section 3) -> C3 -> WM8960 LINPUT1. Plug sleeve -> GND | |
-| Receiver: WM8960 HP_L -> R1 47 Ohm -> plug tip. HP_R -> R2 47 Ohm -> plug ring. Headphone ground -> plug sleeve | The 47 Ohm protect the outputs when a mono 6.35 mm jack shorts the ring |
-| Option B: C6 10 uF and C7 100 nF across nRF24 VCC and GND, soldered on the module pins | Without them the nRF24 fails at random |
+The 10 kOhm pull-up on the transmitter's CSN keeps the nRF24 quiet while the ESP32-C3 starts: D9 is a boot pin, and the nRF24 must not pull it low.
 
 ## 5. Parts
 
-Per side. Buy links and spares are in the [shopping list](../shopping-list.md).
+Buy links, spares and prices: [shopping-list.md](../shopping-list.md), section 8.
 
 | Ref | Part | Transmitter | Receiver |
 |---|---|---|---|
-| U1 | XIAO nRF52840 (A) or XIAO ESP32-C3 (B) | 1 | 1 |
+| U1 | XIAO ESP32-C3 / ESP32-S3 DevKitC-1 N16R8 | 1 | 1 |
 | U2 | WM8960 module | 1 | 1 |
 | U3 | MCP6002 (DIP-8 on breadboard, SOIC-8 on a PCB) | 1 | - |
-| U4 | nRF24L01+, mini SMD for the case (B only) | 1 | 1 |
-| R1, R2 | 1 MOhm | 2 | - |
+| U4 | nRF24L01+ (mini SMD in the transmitter) | 1 | 1 |
+| R1, R2 | 1 MOhm (transmitter) / 47 Ohm (receiver) | 2 | 2 |
 | R3, R4 | 100 kOhm | 2 | - |
-| R1, R2 (receiver) | 47 Ohm | - | 2 |
-| R6 | 10 kOhm (B only) | 1 | 1 |
+| R6 | 10 kOhm, CSN pull-up | 1 | - |
 | C1 | 100 nF film or C0G ceramic | 1 | - |
 | C2 | 10 uF | 1 | - |
 | C3 | 1 uF | 1 | - |
-| C4 | 100 nF ceramic | 1 | - |
-| C5 | 100 nF ceramic at the WM8960 power pins, only if the module has none | 1 | 1 |
-| C6, C7 | 10 uF + 100 nF (B only) | 1 each | 1 each |
-| P1 | 6.35 mm mono male plug (transmitter), 3.5 mm stereo male plug (receiver) | 1 | 1 |
-| SW1 | Mini slide switch | 1 | 1 |
-| BT1 | LiPo 1S 300-500 mAh with protection board, JST-PH | 1 | 1 |
-| - | 3.5 mm female to 6.35 mm male adapter | - | 1 |
+| C4 | 100 nF ceramic at U3 | 1 | - |
+| C6, C7 | 10 uF + 100 nF at the nRF24 | 1 each | 1 each |
+| P1 / J2, J3 | 6.35 mm mono male plug / 6.35 mm mono jack + 3.5 mm stereo jack | 1 | 1 + 1 |
+| SW1 | Mini slide switch | 1 | - |
+| BT1 | LiPo 1S 400-600 mAh with protection board, JST-PH | 1 | - |
 
-## 6. Build: breadboard, soldered board, case
+## 6. Build
 
 ### Stage 1: breadboard
 
-1. Solder pin headers on the XIAO and the WM8960 module.
-2. Flash a test program to both XIAOs ([section 7](#7-firmware), steps 1-2) before wiring audio.
-3. Build the receiver first: XIAO + WM8960, play a test tone into headphones.
-4. Build the transmitter buffer. Measure 1.65 V at Vref and at U3 pin 1 with nothing plugged in.
-5. Join both sides and test with phone audio, then the guitar.
+1. Solder pin headers on the XIAO, the WM8960 modules and the nRF24 modules (or use the 8-pin nRF24 breadboard adapter).
+2. Radio first: one nRF24 on each board, send numbered packets, count the lost ones ([section 7](#7-firmware), step 2).
+3. Receiver audio: ESP32-S3 + WM8960, play a test tone on both jacks.
+4. Transmitter buffer: measure 1.65 V at Vref and at U3 pin 1 with nothing plugged in.
+5. Join both sides: phone audio first, then the guitar.
 
-### Stage 2: soldered board
+### Stage 2: soldered boards
 
-Hand-wired double-sided prototype board, cut to the size of the case.
+- **Transmitter:** hand-wired double-sided prototype board cut to the case, boards stacked (buffer board, WM8960, XIAO), the mini nRF24 at the end of the case away from the battery. A custom PCB (KiCad, JLCPCB, about 5 USD for 5 boards) is the smallest option.
+- **Receiver:** a perfboard with headers in any box, powered over USB-C. In step 2 its parts move into the pedal.
+- Check every connection with the multimeter (continuity) before powering up.
 
-- Put the XIAO and the WM8960 on female headers, so either can be replaced.
-- Stack the boards: buffer board, WM8960, XIAO on top.
-- Short wires. Keep the buffer input wire (plug to C1) short and away from the XIAO.
-- Check every connection with the multimeter (continuity) before connecting the battery.
-
-### Stage 3: custom PCB (optional)
-
-Draw the schematic in KiCad, make a board shaped to the case, order from JLCPCB or PCBWay (about 5 USD for 5 boards plus shipping). Smallest and strongest.
-
-### The 3D-printed case
+### The transmitter case (3D printed)
 
 - Openings: the plug, USB-C (charging and flashing), the slide switch, and a thin wall or small hole over the LED.
-- No metal near the XIAO antenna (the end away from the USB-C port). No metallic paint or foil.
+- No metal near the nRF24 antenna (the zigzag track at the end of the module). No metallic paint or foil.
 - The plug carries the whole box. Clamp its metal barrel between the case halves, or screw it into a printed boss with its nut. Close with M2 screws in heat-set inserts.
 - PETG is stronger than PLA and survives a hot car.
 - Guitar jacks differ: recessed (Stratocaster), on the side (Les Paul), in a cup (Telecaster). Print the plug end first and try it on your guitar. Use the right-angle plug if a straight case hits the body.
@@ -205,49 +185,50 @@ Draw the schematic in KiCad, make a board shaped to the case, order from JLCPCB 
 
 ## 7. Firmware
 
-| | Option A | Option B |
+PlatformIO, Arduino framework. Boards `seeed_xiao_esp32c3` and `esp32-s3-devkitc-1`. Library `RF24`. Later in `firmware/tx` and `firmware/rx`; the receiver code moves into the pedal firmware.
+
+| Part | Transmitter | Receiver |
 |---|---|---|
-| Tools | nRF Connect SDK (Zephyr) in VS Code, board `xiao_ble` | PlatformIO, Arduino framework, board `seeed_xiao_esp32c3`, `RF24` library |
-| Flashing | Double-press reset, a USB drive appears, copy the `.uf2` file | USB-C, like the pedal's ESP32 |
-| Radio | ESB, 2 Mbit/s, 48 samples per packet, 1-2 resends | nRF24 at 2 Mbit/s, 15 samples per packet, no auto-acknowledge |
-| I2S | WM8960 is master, XIAO is slave | XIAO is master |
+| WM8960 setup (I2C) | Line input, PGA gain, ADC on, 32 kHz, slave | DAC on, headphone amp on, 32 kHz, slave |
+| I2S | ESP32-C3 master, MCLK 8.192 MHz (256 x 32 kHz), read 15 samples | ESP32-S3 master, same clocks, write each sample to left and right |
+| Radio | nRF24 at 2 Mbit/s, fixed channel, auto-acknowledge off, 32-byte payload: 2-byte packet number + 15 samples | Same settings, receive mode, ring buffer by packet number |
+| Lost packet | - | Repeat the last packet with a fade-out, then silence |
+| Clock drift | - | The two crystals differ slightly (about 1 sample per second). Drop or repeat one sample when the jitter buffer drifts |
+| Wi-Fi / Bluetooth | Off | Off |
 
-Both: the receiver handles lost packets (repeat the last one with a fade-out, then silence) and clock drift (the two crystals differ by 20-40 ppm: drop or repeat one sample when the jitter buffer drifts). Later in `firmware/tx` and `firmware/rx`.
-
-1. [ ] Blink test on both XIAOs.
-2. [ ] Radio only: send 1000 numbered packets per second, count the lost ones at 1, 5 and 10 m, with your body in between.
-3. [ ] Receiver: WM8960 setup over I2C, play a 440 Hz tone. Headphones, then the amp through the adapter.
+1. [ ] Blink test on both boards.
+2. [ ] Radio only: send 2,000 numbered packets per second, count the lost ones at 1, 5 and 10 m, with your body in between. Try channels away from your Wi-Fi.
+3. [ ] Receiver: WM8960 setup over I2C, play a 440 Hz tone on headphones and into the amp.
 4. [ ] Transmitter: WM8960 setup, print the input level over USB serial with phone audio as input.
 5. [ ] Both: phone audio in, headphones out. Then the guitar.
 6. [ ] Measure the latency: dry guitar on one input of an audio interface, receiver output on the other. Read the delay in Audacity.
-7. [ ] Tune the jitter buffer, packet size and radio channel.
-8. [ ] Battery level on the LED (option A). Do not read the battery voltage while charging (Seeed warning about pin P0.14).
+7. [ ] Tune the jitter buffer size and the radio channel.
+8. [ ] Battery voltage over serial; later a low-battery blink.
 
 ## 8. Problems and fixes
 
 | Problem | Likely cause |
 |---|---|
+| Radio works sometimes | Missing 10 uF / 100 nF at the nRF24, long wires, or a fake chip. Try another module |
+| Many lost packets | Busy channel (try 2.4xx MHz channels above your Wi-Fi), body between the boxes, antenna near metal |
 | Clicks every few seconds | Jitter buffer too small, or drift correction not working |
-| Dropouts at a distance | Body between transmitter and receiver, antenna near metal, busy channel |
+| Transmitter does not start | nRF24 pulling D9 (a boot pin) low. Check the R6 pull-up on CSN |
 | Dull sound | Buffer missing or bypassed, or R2 is not 1 MOhm |
 | Hiss | WM8960 input gain too high. A hard strum should reach about -6 dBFS |
 | No sound at all | WM8960 not set up (check I2C), no MCLK, or wrong I2S master/slave setting |
-| Option B: board does not start | nRF24 pulling D9 (a boot pin) low. Check the R6 pull-up on CSN |
-| Option B: radio works sometimes | Missing C6/C7 on the nRF24, or a fake chip |
-| Battery does not charge | Slide switch off |
+| Battery does not charge | Slide switch off (it cuts the battery) |
+| Hum at the amp | USB charger ground loop. Use a power bank for the receiver |
 
-## 9. Not verified yet
+## 9. Alternative: nRF52840 for a longer battery life
 
-- The WM8960 module: size, pin names and how it grounds its headphone output vary by seller. If its headphone ground is "OUT3" (capless mode), do not connect it to GND: then add 220 uF caps in series with HP_L and HP_R and use GND for the sleeve.
-- The WM8960 PLL making 48 kHz from a 16 MHz MCK (option A). Check the datasheet.
-- Whether the XIAO 3V3 pin supplies enough current for the headphone amp at high volume.
+A Seeed XIAO nRF52840 does processor and radio in one chip at 15-30 mA: 13-20 h of transmitter battery and 48 kHz audio with resends, at the cost of learning the nRF Connect SDK (Zephyr). The schematics stay in this folder: [transmitter](schematics/tx-nrf52840.svg), [receiver](schematics/rx-nrf52840.svg). Its radio can be set to the nRF24-compatible mode, so a later nRF52840 transmitter should still work with this receiver. Parts: [shopping-list.md](../shopping-list.md), section 9.
+
+## 10. Not verified yet
+
+- The WM8960 module: size, pin names and how it grounds its headphone output vary by seller. If its headphone ground is "OUT3" (capless mode), do not connect it to GND: add 220 uF caps in series with HP_L and HP_R and use GND for the sleeve.
+- MCLK accuracy: the ESP32-C3 and ESP32-S3 make it with a fractional divider. Probably fine for guitar; check that the WM8960 accepts it.
+- 32 kHz through the nRF24 without resends: the throughput is close to the nRF24's practical limit. Test step 2 first.
 - XIAO pin order: check against the Seeed pinout before soldering.
-- Latency, range and battery life are estimates, not measurements.
+- Latency, range and battery life are estimates.
 
-Sources: [Seeed XIAO nRF52840 wiki](https://wiki.seeedstudio.com/XIAO_BLE/), [SparkFun WM8960 hookup guide](https://www.digikey.com/en/maker/projects/audio-codec-breakout-wm8960-hookup-guide/64b54a59f8004b81ad76ab21cb7f2c65).
-
-## Ideas for later
-
-- Pairing button, so two systems can work in the same room.
-- Channel hopping when a channel is busy.
-- The digital pedal as the receiver.
+Sources: [Seeed XIAO ESP32-C3 wiki](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/), [SparkFun WM8960 hookup guide](https://www.digikey.com/en/maker/projects/audio-codec-breakout-wm8960-hookup-guide/64b54a59f8004b81ad76ab21cb7f2c65).

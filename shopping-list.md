@@ -53,8 +53,7 @@ Tips:
 | Small nut driver / socket set | [`nut driver set`](https://www.aliexpress.com/w/wholesale-nut-driver-set.html?SortType=total_tranpro_desc) | 1 | A, B, W | For jack and pot nuts |
 | Safety glasses | [`safety glasses`](https://www.aliexpress.com/w/wholesale-safety-glasses.html?SortType=total_tranpro_desc) | 1 | all | For drilling |
 | Alligator clip test leads | [`alligator clip test leads`](https://www.aliexpress.com/w/wholesale-alligator-clip-test-leads.html?SortType=total_tranpro_desc) | 1 pack (10) | B, W | Connects jacks and the multimeter to the breadboard |
-| USB data cable for the ESP32 DevKit | [`micro USB data cable`](https://www.aliexpress.com/w/wholesale-micro-USB-data-cable.html?SortType=total_tranpro_desc) or [`USB C data cable`](https://www.aliexpress.com/w/wholesale-USB-C-data-cable.html?SortType=total_tranpro_desc) | 2 | B | Check the connector on your DevKit. Must be a data cable, not charge-only |
-| USB-C data cable | [`USB C data cable`](https://www.aliexpress.com/w/wholesale-USB-C-data-cable.html?SortType=total_tranpro_desc) | 2 | W | XIAO flashing and charging |
+| USB-C data cable | [`USB C data cable`](https://www.aliexpress.com/w/wholesale-USB-C-data-cable.html?SortType=total_tranpro_desc) | 3 | B, W | ESP32-S3 and XIAO: flashing, receiver power, battery charging. Must be a data cable, not charge-only |
 
 Not on AliExpress or probably already at home: a drill, isopropyl alcohol, headphones or a small powered speaker.
 
@@ -65,7 +64,7 @@ Not on AliExpress or probably already at home: a drill, isopropyl alcohol, headp
 | Solid-core wire 22 AWG, 6 colors | [`22AWG solid wire kit`](https://www.aliexpress.com/w/wholesale-22AWG-solid-wire-kit.html?SortType=total_tranpro_desc) | 1 | all | Breadboard and board jumpers |
 | Stranded silicone wire 24 AWG, several colors | [`24AWG silicone wire kit`](https://www.aliexpress.com/w/wholesale-24AWG-silicone-wire-kit.html?SortType=total_tranpro_desc) | 1 | all | Jacks, switches and pots in the enclosure |
 | Heat-shrink tubing set | [`heat shrink tube kit`](https://www.aliexpress.com/w/wholesale-heat-shrink-tube-kit.html?SortType=total_tranpro_desc) | 1 | all | |
-| Breadboard, 830 points | [`breadboard 830`](https://www.aliexpress.com/w/wholesale-breadboard-830.html?SortType=total_tranpro_desc) | 4 | B, W | The 38-pin ESP32 needs two side by side. One each for the wireless transmitter and receiver |
+| Breadboard, 830 points | [`breadboard 830`](https://www.aliexpress.com/w/wholesale-breadboard-830.html?SortType=total_tranpro_desc) | 4 | B, W | The ESP32-S3 DevKit needs two side by side. One each for the wireless transmitter and receiver |
 | Jumper wires M-M, M-F, F-F | [`dupont jumper wire 20cm`](https://www.aliexpress.com/w/wholesale-dupont-jumper-wire-20cm.html?SortType=total_tranpro_desc) | 1 pack each | B, W | |
 | Male pin headers 2.54 mm, 40 pin | [`pin header 2.54 40pin male`](https://www.aliexpress.com/w/wholesale-pin-header-2.54-40pin-male.html?SortType=total_tranpro_desc) | 10 | B, W | |
 | Female pin headers 2.54 mm, 40 pin | [`pin header 2.54 40pin female`](https://www.aliexpress.com/w/wholesale-pin-header-2.54-40pin-female.html?SortType=total_tranpro_desc) | 10 | B, W | Modules plug in, so they can be replaced |
@@ -95,7 +94,7 @@ Not on AliExpress or probably already at home: a drill, isopropyl alcohol, headp
 
 | Item | AliExpress link (sorted by orders) | Buy | For | Notes |
 |---|---|---|---|---|
-| ESP32 DevKit, 38 pin, ESP32-WROOM-32 | [`ESP32 DevKitC 38pin WROOM-32`](https://www.aliexpress.com/w/wholesale-ESP32-DevKitC-38pin-WROOM-32.html?SortType=total_tranpro_desc) | 2 | B | 1 + 1 spare. Must break out GPIO 0, 4, 5, 13, 14, 16-19, 21-23, 25-27, 32-36, 39 |
+| ESP32-S3 DevKitC-1 N16R8 (16 MB flash, 8 MB PSRAM) | [`ESP32-S3 DevKitC-1 N16R8`](https://www.aliexpress.com/w/wholesale-ESP32-S3-DevKitC-1-N16R8.html?SortType=total_tranpro_desc) | 2 | B, W | 1 + 1 spare. Step 1 receiver, then the pedal. Check "N16R8" |
 | PCM1808 ADC module | [`PCM1808 module`](https://www.aliexpress.com/w/wholesale-PCM1808-module.html?SortType=total_tranpro_desc) | 3 | B | 1 + 2 spares |
 | PCM5102A DAC module (GY-PCM5102) | [`PCM5102A I2S DAC module`](https://www.aliexpress.com/w/wholesale-PCM5102A-I2S-DAC-module.html?SortType=total_tranpro_desc) | 3 | B | 1 + 2 spares |
 
@@ -128,45 +127,42 @@ Not on AliExpress or probably already at home: a drill, isopropyl alcohol, headp
 
 | Item | AliExpress link (sorted by orders) | Buy | For | Notes |
 |---|---|---|---|---|
-| ESP32-WROVER board (4-8 MB PSRAM) | [`ESP32 WROVER DevKit`](https://www.aliexpress.com/w/wholesale-ESP32-WROVER-DevKit.html?SortType=total_tranpro_desc) | 1 | B opt | Delay and reverb |
 | SSD1306 0.96" OLED, I2C | [`SSD1306 0.96 OLED I2C`](https://www.aliexpress.com/w/wholesale-SSD1306-0.96-OLED-I2C.html?SortType=total_tranpro_desc) | 2 | B opt | Settings and preset names |
 | EC11 rotary encoder with push button | [`EC11 rotary encoder`](https://www.aliexpress.com/w/wholesale-EC11-rotary-encoder.html?SortType=total_tranpro_desc) | 2 | B opt | Menu |
 
 ## 8. Wireless guitar system
 
-Design: [wireless-guitar-system/readme.md](wireless-guitar-system/readme.md). Seeed XIAO nRF52840 + WM8960 codec on each side, small LiPo battery, 3D-printed case.
+Design: [wireless-guitar-system/readme.md](wireless-guitar-system/readme.md). Transmitter: XIAO ESP32-C3 + nRF24L01+ + WM8960, LiPo, 3D-printed case. Receiver: the ESP32-S3 from section 4 + nRF24L01+ + WM8960, USB powered. Capacitors and resistors come from the kits in section 3.
 
 | Item | AliExpress link (sorted by orders) | Buy | For | Notes |
 |---|---|---|---|---|
-| Seeed XIAO nRF52840 (not the Sense) | [`Seeed XIAO nRF52840`](https://www.aliexpress.com/w/wholesale-Seeed-XIAO-nRF52840.html?SortType=total_tranpro_desc) | 3 | W | 2 + 1 spare. Seeed Studio official store. Has a LiPo charger and an RGB LED on board |
-| WM8960 codec module | [`WM8960 audio module`](https://www.aliexpress.com/w/wholesale-WM8960-audio-module.html?SortType=total_tranpro_desc) | 3 | W | 2 + 1 spare. Pick the smallest board, 3.3 V. Avoid the big Raspberry Pi HAT version |
-| MCP6002 op-amp, DIP-8 | [`MCP6002 DIP8`](https://www.aliexpress.com/w/wholesale-MCP6002-DIP8.html?SortType=total_tranpro_desc) | 5 | W | Transmitter buffer on the breadboard. Runs on 3.3 V (the TL072 needs 7 V or more) |
-| MCP6002 op-amp, SOIC-8 | [`MCP6002 SOIC8`](https://www.aliexpress.com/w/wholesale-MCP6002-SOIC8.html?SortType=total_tranpro_desc) | 5 | W | Only for the custom PCB |
-| LiPo 1S 3.7 V, 300-500 mAh, with protection board | [`602030 lipo 400mAh`](https://www.aliexpress.com/w/wholesale-602030-lipo-400mAh.html?SortType=total_tranpro_desc) | 3 | W | 2 + 1 spare. Choose the size after the case is drawn |
-| JST-PH 2.0 2-pin pigtails, male + female | [`JST PH 2.0 2pin pigtail`](https://www.aliexpress.com/w/wholesale-JST-PH-2.0-2pin-pigtail.html?SortType=total_tranpro_desc) | 1 pack | W | Battery can be unplugged |
-| Mini slide switch SPDT | [`SS12D00 slide switch`](https://www.aliexpress.com/w/wholesale-SS12D00-slide-switch.html?SortType=total_tranpro_desc) | 10 | W | Power switch on each case |
+| Seeed XIAO ESP32-C3 | [`Seeed XIAO ESP32C3`](https://www.aliexpress.com/w/wholesale-Seeed-XIAO-ESP32C3.html?SortType=total_tranpro_desc) | 2 | W | Transmitter. 1 + 1 spare. Seeed Studio official store, not the C3 SuperMini |
+| nRF24L01+ module, PCB antenna | [`nRF24L01+ module`](https://www.aliexpress.com/w/wholesale-nRF24L01%2B-module.html?SortType=total_tranpro_desc) | 4 | W, B | Breadboard tests, receiver, pedal. Many are Si24R1 copies: buy from stores with many reviews |
+| nRF24L01+ mini SMD module | [`nRF24L01+ SMD mini`](https://www.aliexpress.com/w/wholesale-nRF24L01%2B-SMD-mini.html?SortType=total_tranpro_desc) | 3 | W | Transmitter case. 1 + 2 spares |
+| nRF24 adapter board with 3.3 V regulator | [`nRF24L01 adapter 3.3V`](https://www.aliexpress.com/w/wholesale-nRF24L01-adapter-3.3V.html?SortType=total_tranpro_desc) | 2 | W, B | Breadboard: the nRF24 pins do not fit a breadboard |
+| WM8960 codec module | [`WM8960 audio module`](https://www.aliexpress.com/w/wholesale-WM8960-audio-module.html?SortType=total_tranpro_desc) | 3 | W | Transmitter + receiver + spare. Pick the smallest board, 3.3 V, not the Raspberry Pi HAT |
+| MCP6002 op-amp, DIP-8 | [`MCP6002 DIP8`](https://www.aliexpress.com/w/wholesale-MCP6002-DIP8.html?SortType=total_tranpro_desc) | 5 | W | Transmitter buffer on the breadboard. Runs on 3.3 V |
+| MCP6002 op-amp, SOIC-8 | [`MCP6002 SOIC8`](https://www.aliexpress.com/w/wholesale-MCP6002-SOIC8.html?SortType=total_tranpro_desc) | 5 | W | Only for a custom PCB |
+| LiPo 1S 3.7 V, 400-600 mAh, with protection board | [`602535 lipo 500mAh`](https://www.aliexpress.com/w/wholesale-602535-lipo-500mAh.html?SortType=total_tranpro_desc) | 2 | W | Transmitter. 1 + 1 spare. Choose the size after the case is drawn |
+| JST-PH 2.0 2-pin pigtails, male + female | [`JST PH 2.0 2pin pigtail`](https://www.aliexpress.com/w/wholesale-JST-PH-2.0-2pin-pigtail.html?SortType=total_tranpro_desc) | 1 | W | Battery can be unplugged |
+| Mini slide switch SPDT | [`SS12D00 slide switch`](https://www.aliexpress.com/w/wholesale-SS12D00-slide-switch.html?SortType=total_tranpro_desc) | 10 | W | Transmitter power switch |
 | 6.35 mm mono male plug, metal, solder type | [`6.35mm mono plug metal solder`](https://www.aliexpress.com/w/wholesale-6.35mm-mono-plug-metal-solder.html?SortType=total_tranpro_desc) | 3 | W | Transmitter. Straight |
-| 6.35 mm mono male plug, right-angle | [`6.35mm right angle plug solder`](https://www.aliexpress.com/w/wholesale-6.35mm-right-angle-plug-solder.html?SortType=total_tranpro_desc) | 2 | W | In case a straight case does not fit your guitar's jack |
-| 3.5 mm stereo male plug, metal, solder type | [`3.5mm stereo plug solder`](https://www.aliexpress.com/w/wholesale-3.5mm-stereo-plug-solder.html?SortType=total_tranpro_desc) | 3 | W | Receiver (P3) |
-| Adapter 3.5 mm female to 6.35 mm male | [`3.5mm female to 6.35mm male adapter`](https://www.aliexpress.com/w/wholesale-3.5mm-female-to-6.35mm-male-adapter.html?SortType=total_tranpro_desc) | 2 | W | Push onto the receiver to get P10 |
+| 6.35 mm mono male plug, right-angle | [`6.35mm right angle plug solder`](https://www.aliexpress.com/w/wholesale-6.35mm-right-angle-plug-solder.html?SortType=total_tranpro_desc) | 2 | W | If a straight case does not fit your guitar's jack |
+| 3.5 mm stereo jack, panel mount | [`3.5mm stereo jack panel mount`](https://www.aliexpress.com/w/wholesale-3.5mm-stereo-jack-panel-mount.html?SortType=total_tranpro_desc) | 3 | W | Receiver P3 output. The 6.35 mm jack comes from section 5 |
 | Solderable breadboard, half size | [`solderable breadboard half`](https://www.aliexpress.com/w/wholesale-solderable-breadboard-half.html?SortType=total_tranpro_desc) | 4 | W, B | Same layout as a breadboard, so the circuit moves over 1:1 |
-| Double-sided prototype board, 3 x 7 cm | [`double sided PCB prototype 3x7`](https://www.aliexpress.com/w/wholesale-double-sided-PCB-prototype-3x7.html?SortType=total_tranpro_desc) | 10 | W | Cut to fit the case |
+| Double-sided prototype board, 3 x 7 cm | [`double sided PCB prototype 3x7`](https://www.aliexpress.com/w/wholesale-double-sided-PCB-prototype-3x7.html?SortType=total_tranpro_desc) | 10 | W | Cut to fit the transmitter case |
 | M2 heat-set inserts + M2 screws kit | [`M2 heat set insert kit`](https://www.aliexpress.com/w/wholesale-M2-heat-set-insert-kit.html?SortType=total_tranpro_desc) | 1 | W | Closes the 3D-printed case |
-| CMSIS-DAP / DAPLink debug probe (SWD) | [`DAPLink CMSIS-DAP`](https://www.aliexpress.com/w/wholesale-DAPLink-CMSIS-DAP.html?SortType=total_tranpro_desc) | 1 | W opt | Only to recover a board if its bootloader is erased |
 
-Custom PCB (optional, after the solderable breadboard works): JLCPCB or PCBWay, about 5 USD for 5 boards plus shipping.
+Custom PCB for the transmitter (optional): JLCPCB or PCBWay, about 5 USD for 5 boards plus shipping.
 
-## 9. Wireless option B: ESP32 + nRF24 (instead of the nRF52840)
+## 9. Wireless alternative: nRF52840 (longer battery life)
 
-See [wireless-guitar-system/readme.md, Option B](wireless-guitar-system/readme.md#1-choose-an-option). From section 8, still buy everything except the XIAO nRF52840 and the debug probe.
+Only if you choose the [nRF52840 alternative](wireless-guitar-system/readme.md#9-alternative-nrf52840-for-a-longer-battery-life). It replaces the XIAO ESP32-C3 and the nRF24 modules.
 
 | Item | AliExpress link (sorted by orders) | Buy | For | Notes |
 |---|---|---|---|---|
-| Seeed XIAO ESP32-C3 | [`Seeed XIAO ESP32C3`](https://www.aliexpress.com/w/wholesale-Seeed-XIAO-ESP32C3.html?SortType=total_tranpro_desc) | 3 | W opt | 2 + 1 spare. Seeed Studio official store |
-| nRF24L01+ module, PCB antenna | [`nRF24L01+ module`](https://www.aliexpress.com/w/wholesale-nRF24L01%2B-module.html?SortType=total_tranpro_desc) | 4 | W opt | For the breadboard. Many are Si24R1 copies: buy from stores with many reviews |
-| nRF24L01+ mini SMD module | [`nRF24L01+ SMD mini`](https://www.aliexpress.com/w/wholesale-nRF24L01%2B-SMD-mini.html?SortType=total_tranpro_desc) | 4 | W opt | Smaller, for the case |
-| nRF24 adapter board with 3.3 V regulator | [`nRF24L01 adapter 3.3V`](https://www.aliexpress.com/w/wholesale-nRF24L01-adapter-3.3V.html?SortType=total_tranpro_desc) | 2 | W opt | Breadboard only, powered from the DevKit's 5 V |
-| 10 uF and 100 nF capacitors, 10 kOhm resistor | (from the kits in section 3) | 1 each per side | W opt | C6, C7 on the nRF24 power pins; R6 pull-up on CSN |
+| Seeed XIAO nRF52840 (not the Sense) | [`Seeed XIAO nRF52840`](https://www.aliexpress.com/w/wholesale-Seeed-XIAO-nRF52840.html?SortType=total_tranpro_desc) | 3 | W opt | 2 + 1 spare. Seeed Studio official store |
+| CMSIS-DAP / DAPLink debug probe (SWD) | [`DAPLink CMSIS-DAP`](https://www.aliexpress.com/w/wholesale-DAPLink-CMSIS-DAP.html?SortType=total_tranpro_desc) | 1 | W opt | Only to recover a board if its bootloader is erased |
 
 ## Cost per item
 
@@ -194,9 +190,8 @@ Target prices in EUR, including Danish VAT (25%), for the quantities in the sect
 | Small nut driver / socket set | 1 | 8 | 8 |
 | Safety glasses | 1 | 3 | 3 |
 | Alligator clip test leads (pack of 10) | 1 | 4 | 4 |
-| USB data cable for the ESP32 DevKit | 2 | 2.5 | 5 |
-| USB-C data cable | 2 | 2.5 | 5 |
-| **Subtotal** | | | **161** |
+| USB-C data cable | 3 | 2.5 | 7.5 |
+| **Subtotal** | | | **159** |
 
 ### 2. Wire and prototyping
 
@@ -237,10 +232,10 @@ Target prices in EUR, including Danish VAT (25%), for the quantities in the sect
 
 | Item | Qty | Target each | Target total |
 |---|---|---|---|
-| ESP32 DevKit, 38 pin | 2 | 5 | 10 |
+| ESP32-S3 DevKitC-1 N16R8 | 2 | 9 | 18 |
 | PCM1808 module | 3 | 3 | 9 |
 | PCM5102A module | 3 | 1.8 | 5.4 |
-| **Subtotal** | | | **24** |
+| **Subtotal** | | | **32** |
 
 ### 5. Front panel and enclosure hardware
 
@@ -273,55 +268,53 @@ Target prices in EUR, including Danish VAT (25%), for the quantities in the sect
 
 | Item | Qty | Target each | Target total |
 |---|---|---|---|
-| ESP32-WROVER board (optional) | 1 | 7 | 7 |
 | SSD1306 OLED (optional) | 2 | 2.5 | 5 |
 | EC11 rotary encoder (optional) | 2 | 0.8 | 1.6 |
-| **Subtotal (optional)** | | | **14** |
+| **Subtotal (optional)** | | | **7** |
 
-### 8. Wireless guitar system (option A)
+### 8. Wireless guitar system
 
 | Item | Qty | Target each | Target total |
 |---|---|---|---|
-| Seeed XIAO nRF52840 | 3 | 13 | 39 |
-| WM8960 module | 3 | 10 | 30 |
-| MCP6002, DIP-8 | 5 | 0.5 | 2.5 |
-| MCP6002, SOIC-8 | 5 | 0.4 | 2 |
-| LiPo 1S 300-500 mAh | 3 | 3 | 9 |
-| JST-PH 2-pin pigtails (pack) | 1 | 2 | 2 |
-| Mini slide switch | 10 | 0.15 | 1.5 |
-| 6.35 mm male plug, straight | 3 | 2 | 6 |
-| 6.35 mm male plug, right-angle | 2 | 2 | 4 |
-| 3.5 mm stereo male plug | 3 | 1 | 3 |
-| Adapter 3.5 mm female to 6.35 mm male | 2 | 1 | 2 |
+| Seeed XIAO ESP32-C3 | 2 | 7 | 14 |
+| nRF24L01+ module, PCB antenna | 4 | 1.2 | 4.8 |
+| nRF24L01+ mini SMD module | 3 | 1.5 | 4.5 |
+| nRF24 adapter board with 3.3 V regulator | 2 | 0.8 | 1.6 |
+| WM8960 codec module | 3 | 10 | 30 |
+| MCP6002 op-amp, DIP-8 | 5 | 0.5 | 2.5 |
+| MCP6002 op-amp, SOIC-8 | 5 | 0.4 | 2 |
+| LiPo 1S 3.7 V, 400-600 mAh, with protection board | 2 | 3.5 | 7 |
+| JST-PH 2.0 2-pin pigtails, male + female | 1 | 2 | 2 |
+| Mini slide switch SPDT | 10 | 0.15 | 1.5 |
+| 6.35 mm mono male plug, metal, solder type | 3 | 2 | 6 |
+| 6.35 mm mono male plug, right-angle | 2 | 2 | 4 |
+| 3.5 mm stereo jack, panel mount | 3 | 0.4 | 1.2 |
 | Solderable breadboard, half size | 4 | 1.5 | 6 |
-| Double-sided prototype board 3 x 7 cm | 10 | 0.3 | 3 |
-| M2 heat-set inserts + screws kit | 1 | 5 | 5 |
-| DAPLink debug probe (optional) | 1 | 5 | 5 |
-| **Subtotal** | | | **115** (+5 optional) |
+| Double-sided prototype board, 3 x 7 cm | 10 | 0.3 | 3 |
+| M2 heat-set inserts + M2 screws kit | 1 | 5 | 5 |
+| **Subtotal** | | | **95** |
 
-### 9. Wireless option B (replaces the XIAO nRF52840 row in section 8)
+### 9. Wireless alternative: nRF52840 (replaces the XIAO ESP32-C3 and nRF24 rows)
 
 | Item | Qty | Target each | Target total |
 |---|---|---|---|
-| Seeed XIAO ESP32-C3 (optional) | 3 | 7 | 21 |
-| nRF24L01+ module (optional) | 4 | 1.2 | 4.8 |
-| nRF24L01+ mini SMD module (optional) | 4 | 1.5 | 6 |
-| nRF24 adapter board (optional) | 2 | 0.8 | 1.6 |
-| **Subtotal (optional)** | | | **33** |
+| Seeed XIAO nRF52840 (optional) | 3 | 13 | 39 |
+| DAPLink debug probe (optional) | 1 | 5 | 5 |
+| **Subtotal (optional)** | | | **44** |
 
 ## Summary
 
 | | Target |
 |---|---|
-| Digital pedal (sections 2-6) | 188 |
-| Wireless system, option A, with spares (section 8) | 115 |
-| **Everything required** | **303** |
-| Same with wireless option B instead (section 9 replaces the XIAO nRF52840) | 297 |
-| Optional items (marked above) | up to 69 |
+| Digital pedal (sections 2-6) | 196 |
+| Wireless system, with spares (section 8) | 95 |
+| **Everything required** | **291** |
+| Optional items (marked above) | up to 57 |
+| Wireless alternative nRF52840 (section 9) | +19 if it replaces the ESP32-C3 and nRF24 parts |
 | Analog pedals (postponed, not included) | see [analog-pedals/shopping-list.md](analog-pedals/shopping-list.md) |
-| **Tools (section 1)** | **161** |
+| **Tools (section 1)** | **159** |
 
-The wireless system alone, one transmitter and one receiver without spares, costs about 60 EUR with XIAO + WM8960 on both sides, or about 40 EUR with the cheaper options below. 3D-printing filament not counted.
+The wireless system alone, one transmitter and one receiver without spares, costs about 50 EUR. The ESP32-S3 is counted in section 4 because the pedal reuses it. 3D-printing filament not counted.
 
 ### Auxiliary equipment (not in the sections above)
 
@@ -337,17 +330,14 @@ The wireless system alone, one transmitter and one receiver without spares, cost
 
 ## Saving on the wireless part
 
-Ways to make it cheaper:
-
 | Change | Saves |
 |---|---|
-| SuperMini nRF52840 (about 6 each) instead of the XIAO nRF52840 (about 13 each), x3 | about 20 |
-| Receiver with a spare PCM5102A instead of a WM8960 (no headphone amp on P3) | about 10 |
-| Option B (section 9) instead of option A: XIAO ESP32-C3 + nRF24 instead of the XIAO nRF52840 | about 5 |
+| Receiver with a spare PCM5102A instead of a WM8960 (no headphone amp on the 3.5 mm jack) | about 10 |
+| Skip the spare XIAO and WM8960 | about 17 |
 
 ## Check before you order
 
 - [ ] Pot shafts and knobs are the same type (knurled 18T or D-shaft, 6 mm).
-- [ ] The ESP32 DevKit is the 38-pin version.
+- [ ] The ESP32-S3 board is the DevKitC-1 N16R8 (8 MB PSRAM).
 - [ ] The resistor kit contains 1 MOhm.
 - [ ] The power supply is 9 V, center-negative.

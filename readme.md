@@ -1,10 +1,8 @@
-<p align="center"><img src="assets/banner.svg" alt="MMH-MP, Magic Mayer Home-Made Pedal, in retro block letters, with a photo of a guitarist pulling a funny guitar face in a retro sun" width="100%"></p>
+<p align="center"><img src="assets/banner.svg" alt="mmh-mp, Magic Mayer Home-Made Pedal, in fat rounded green lowercase letters with a double outline, next to a photo of a guitarist pulling a funny guitar face" width="100%"></p>
 
 # Magic Mayer Home-Made Pedal (MMH-MP)
 
 Home-made guitar gear, built one step at a time. Three famous pedals (Tube Screamer, Klon Centaur, Keeley Katana) are recreated: first as code you can hear on the PC, then on a small computer chip, then as real circuits. A wireless link replaces the guitar cable.
-
-Plan: [docs/plan.md](docs/plan.md). Everything to buy, with prices: [shopping-list.md](shopping-list.md).
 
 ## Tone Lab: hear it on the PC first
 
@@ -16,7 +14,7 @@ A small battery box plugs into the guitar and sends the sound by radio to a seco
 
 ## 2. Digital pedal
 
-One pedal box where an ESP32 chip plays all three effects, with the real knobs and a footswitch for each effect. [digital-pedal/](digital-pedal/readme.md)
+The wireless receiver grows into one pedal box where an ESP32-S3 chip plays all three effects, with the real knobs and a footswitch for each effect. Cable or wireless in. [digital-pedal/](digital-pedal/readme.md)
 
 ## 3. Analog pedals
 
